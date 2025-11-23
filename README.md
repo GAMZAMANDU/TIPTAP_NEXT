@@ -100,9 +100,12 @@ function MyEditor() {
 
 ```
 tiptap/
-├── demo/                  # Next.js 데모 앱
+├── demo/                  # Next.js 데모 앱 (개발용)
 │   ├── app/
 │   ├── components/
+│   └── package.json
+├── test-app/              # 패키지 테스트 앱
+│   ├── app/
 │   └── package.json
 ├── packages/
 │   └── simple-editor/     # npm 패키지
@@ -114,13 +117,21 @@ tiptap/
 
 ## 개발
 
-### 데모 앱 실행
+### 데모 앱 실행 (로컬 컴포넌트 사용)
 
 ```bash
 npm run dev
-# 또는
-cd demo && npm run dev
+# http://localhost:3000
 ```
+
+### 테스트 앱 실행 (패키지 사용)
+
+```bash
+npm run dev:test
+# http://localhost:3002
+```
+
+테스트 앱은 실제 패키지를 import하여 사용하므로, 패키지가 제대로 작동하는지 확인할 수 있습니다.
 
 ### 패키지 빌드
 

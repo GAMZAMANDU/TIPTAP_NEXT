@@ -5,10 +5,12 @@
   "description": "Tiptap Simple Editor workspace",
   "workspaces": [
     "demo",
+    "test-app",
     "packages/*"
   ],
   "scripts": {
     "dev": "npm run dev -w demo",
+    "dev:test": "npm run dev -w test-app",
     "build": "npm run build -w demo",
     "build:package": "npm run build -w packages/simple-editor"
   },

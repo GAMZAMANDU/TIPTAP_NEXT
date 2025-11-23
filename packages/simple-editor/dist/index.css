@@ -47,21 +47,21 @@
   --tt-button-default-bg-color: var(--tt-gray-light-a-100);
   --tt-button-hover-bg-color: var(--tt-gray-light-200);
   --tt-button-active-bg-color: var(--tt-gray-light-a-200);
-  --tt-button-active-bg-color-emphasized: var( --tt-brand-color-100 );
-  //more important active state --tt-button-active-bg-color-subdued: var( --tt-gray-light-a-200 );
+  --tt-button-active-bg-color-emphasized: var(--tt-brand-color-100);
+  //more important active state --tt-button-active-bg-color-subdued: var(--tt-gray-light-a-200);
   //less important active state --tt-button-active-hover-bg-color: var(--tt-gray-light-300);
-  --tt-button-active-hover-bg-color-emphasized: var( --tt-brand-color-200 );
-  //more important active state hover --tt-button-active-hover-bg-color-subdued: var( --tt-gray-light-a-300 );
+  --tt-button-active-hover-bg-color-emphasized: var(--tt-brand-color-200);
+  //more important active state hover --tt-button-active-hover-bg-color-subdued: var(--tt-gray-light-a-300);
   //less important active state hover --tt-button-disabled-bg-color: var(--tt-gray-light-a-50);
   .dark & {
     --tt-button-default-bg-color: var(--tt-gray-dark-a-100);
     --tt-button-hover-bg-color: var(--tt-gray-dark-200);
     --tt-button-active-bg-color: var(--tt-gray-dark-a-200);
-    --tt-button-active-bg-color-emphasized: var( --tt-brand-color-900 );
-    //more important active state --tt-button-active-bg-color-subdued: var( --tt-gray-dark-a-200 );
+    --tt-button-active-bg-color-emphasized: var(--tt-brand-color-900);
+    //more important active state --tt-button-active-bg-color-subdued: var(--tt-gray-dark-a-200);
     //less important active state --tt-button-active-hover-bg-color: var(--tt-gray-dark-300);
-    --tt-button-active-hover-bg-color-emphasized: var( --tt-brand-color-800 );
-    //more important active state hover --tt-button-active-hover-bg-color-subdued: var( --tt-gray-dark-a-300 );
+    --tt-button-active-hover-bg-color-emphasized: var(--tt-brand-color-800);
+    //more important active state hover --tt-button-active-hover-bg-color-subdued: var(--tt-gray-dark-a-300);
     //less important active state hover --tt-button-disabled-bg-color: var(--tt-gray-dark-a-50);
   }
   --tt-button-default-text-color: var(--tt-gray-light-a-600);
@@ -109,14 +109,14 @@
   --tt-button-default-dropdown-arrows-color: var(--tt-gray-light-a-600);
   --tt-button-hover-dropdown-arrows-color: var(--tt-gray-light-a-700);
   --tt-button-active-dropdown-arrows-color: var(--tt-gray-light-a-600);
-  --tt-button-active-dropdown-arrows-color-emphasized: var( --tt-gray-light-a-700 );
+  --tt-button-active-dropdown-arrows-color-emphasized: var(--tt-gray-light-a-700);
   --tt-button-active-dropdown-arrows-color-subdued: var(--tt-gray-light-a-600);
   --tt-button-disabled-dropdown-arrows-color: var(--tt-gray-light-a-400);
   .dark & {
     --tt-button-default-dropdown-arrows-color: var(--tt-gray-dark-a-600);
     --tt-button-hover-dropdown-arrows-color: var(--tt-gray-dark-a-700);
     --tt-button-active-dropdown-arrows-color: var(--tt-gray-dark-a-600);
-    --tt-button-active-dropdown-arrows-color-emphasized: var( --tt-gray-dark-a-700 );
+    --tt-button-active-dropdown-arrows-color-emphasized: var(--tt-gray-dark-a-700);
     --tt-button-active-dropdown-arrows-color-subdued: var(--tt-gray-dark-a-600);
     --tt-button-disabled-dropdown-arrows-color: var(--tt-gray-dark-a-400);
   }
@@ -124,21 +124,21 @@
     --tt-button-default-bg-color: var(--transparent);
     --tt-button-hover-bg-color: var(--tt-gray-light-200);
     --tt-button-active-bg-color: var(--tt-gray-light-a-100);
-    --tt-button-active-bg-color-emphasized: var( --tt-brand-color-100 );
-    //more important active state --tt-button-active-bg-color-subdued: var( --tt-gray-light-a-100 );
+    --tt-button-active-bg-color-emphasized: var(--tt-brand-color-100);
+    //more important active state --tt-button-active-bg-color-subdued: var(--tt-gray-light-a-100);
     //less important active state --tt-button-active-hover-bg-color: var(--tt-gray-light-200);
-    --tt-button-active-hover-bg-color-emphasized: var( --tt-brand-color-200 );
-    //more important active state hover --tt-button-active-hover-bg-color-subdued: var( --tt-gray-light-a-200 );
+    --tt-button-active-hover-bg-color-emphasized: var(--tt-brand-color-200);
+    //more important active state hover --tt-button-active-hover-bg-color-subdued: var(--tt-gray-light-a-200);
     //less important active state hover --tt-button-disabled-bg-color: var(--transparent);
     .dark & {
       --tt-button-default-bg-color: var(--transparent);
       --tt-button-hover-bg-color: var(--tt-gray-dark-200);
       --tt-button-active-bg-color: var(--tt-gray-dark-a-100);
-      --tt-button-active-bg-color-emphasized: var( --tt-brand-color-900 );
-      //more important active state --tt-button-active-bg-color-subdued: var( --tt-gray-dark-a-100 );
+      --tt-button-active-bg-color-emphasized: var(--tt-brand-color-900);
+      //more important active state --tt-button-active-bg-color-subdued: var(--tt-gray-dark-a-100);
       //less important active state --tt-button-active-hover-bg-color: var(--tt-gray-dark-200);
-      --tt-button-active-hover-bg-color-emphasized: var( --tt-brand-color-800 );
-      //more important active state hover --tt-button-active-hover-bg-color-subdued: var( --tt-gray-dark-a-200 );
+      --tt-button-active-hover-bg-color-emphasized: var(--tt-brand-color-800);
+      //more important active state hover --tt-button-active-hover-bg-color-subdued: var(--tt-gray-dark-a-200);
       //less important active state hover --tt-button-disabled-bg-color: var(--transparent);
     }
     --tt-button-default-text-color: var(--tt-gray-light-a-600);
@@ -186,15 +186,15 @@
     --tt-button-default-dropdown-arrows-color: var(--tt-gray-light-a-600);
     --tt-button-hover-dropdown-arrows-color: var(--tt-gray-light-a-700);
     --tt-button-active-dropdown-arrows-color: var(--tt-gray-light-a-600);
-    --tt-button-active-dropdown-arrows-color-emphasized: var( --tt-gray-light-a-700 );
-    --tt-button-active-dropdown-arrows-color-subdued: var( --tt-gray-light-a-600 );
+    --tt-button-active-dropdown-arrows-color-emphasized: var(--tt-gray-light-a-700);
+    --tt-button-active-dropdown-arrows-color-subdued: var(--tt-gray-light-a-600);
     --tt-button-disabled-dropdown-arrows-color: var(--tt-gray-light-a-400);
     .dark & {
       --tt-button-default-dropdown-arrows-color: var(--tt-gray-dark-a-600);
       --tt-button-hover-dropdown-arrows-color: var(--tt-gray-dark-a-700);
       --tt-button-active-dropdown-arrows-color: var(--tt-gray-dark-a-600);
-      --tt-button-active-dropdown-arrows-color-emphasized: var( --tt-gray-dark-a-700 );
-      --tt-button-active-dropdown-arrows-color-subdued: var( --tt-gray-dark-a-600 );
+      --tt-button-active-dropdown-arrows-color-emphasized: var(--tt-gray-dark-a-700);
+      --tt-button-active-dropdown-arrows-color-subdued: var(--tt-gray-dark-a-600);
       --tt-button-disabled-dropdown-arrows-color: var(--tt-gray-dark-a-400);
     }
   }
@@ -202,21 +202,21 @@
     --tt-button-default-bg-color: var(--tt-brand-color-500);
     --tt-button-hover-bg-color: var(--tt-brand-color-600);
     --tt-button-active-bg-color: var(--tt-brand-color-100);
-    --tt-button-active-bg-color-emphasized: var( --tt-brand-color-100 );
-    //more important active state --tt-button-active-bg-color-subdued: var( --tt-brand-color-100 );
+    --tt-button-active-bg-color-emphasized: var(--tt-brand-color-100);
+    //more important active state --tt-button-active-bg-color-subdued: var(--tt-brand-color-100);
     //less important active state --tt-button-active-hover-bg-color: var(--tt-brand-color-200);
-    --tt-button-active-hover-bg-color-emphasized: var( --tt-brand-color-200 );
-    //more important active state hover --tt-button-active-hover-bg-color-subdued: var( --tt-brand-color-200 );
+    --tt-button-active-hover-bg-color-emphasized: var(--tt-brand-color-200);
+    //more important active state hover --tt-button-active-hover-bg-color-subdued: var(--tt-brand-color-200);
     //less important active state hover --tt-button-disabled-bg-color: var(--tt-gray-light-a-100);
     .dark & {
       --tt-button-default-bg-color: var(--tt-brand-color-500);
       --tt-button-hover-bg-color: var(--tt-brand-color-600);
       --tt-button-active-bg-color: var(--tt-brand-color-900);
-      --tt-button-active-bg-color-emphasized: var( --tt-brand-color-900 );
-      //more important active state --tt-button-active-bg-color-subdued: var( --tt-brand-color-900 );
+      --tt-button-active-bg-color-emphasized: var(--tt-brand-color-900);
+      //more important active state --tt-button-active-bg-color-subdued: var(--tt-brand-color-900);
       //less important active state --tt-button-active-hover-bg-color: var(--tt-brand-color-800);
-      --tt-button-active-hover-bg-color-emphasized: var( --tt-brand-color-800 );
-      //more important active state hover --tt-button-active-hover-bg-color-subdued: var( --tt-brand-color-800 );
+      --tt-button-active-hover-bg-color-emphasized: var(--tt-brand-color-800);
+      //more important active state hover --tt-button-active-hover-bg-color-subdued: var(--tt-brand-color-800);
       //less important active state hover --tt-button-disabled-bg-color: var(--tt-gray-dark-a-100);
     }
     --tt-button-default-text-color: var(--white);
@@ -264,15 +264,15 @@
     --tt-button-default-dropdown-arrows-color: var(--white);
     --tt-button-hover-dropdown-arrows-color: var(--white);
     --tt-button-active-dropdown-arrows-color: var(--tt-gray-light-a-700);
-    --tt-button-active-dropdown-arrows-color-emphasized: var( --tt-gray-light-a-700 );
-    --tt-button-active-dropdown-arrows-color-subdued: var( --tt-gray-light-a-700 );
+    --tt-button-active-dropdown-arrows-color-emphasized: var(--tt-gray-light-a-700);
+    --tt-button-active-dropdown-arrows-color-subdued: var(--tt-gray-light-a-700);
     --tt-button-disabled-dropdown-arrows-color: var(--tt-gray-light-a-400);
     .dark & {
       --tt-button-default-dropdown-arrows-color: var(--white);
       --tt-button-hover-dropdown-arrows-color: var(--white);
       --tt-button-active-dropdown-arrows-color: var(--tt-gray-dark-a-600);
-      --tt-button-active-dropdown-arrows-color-emphasized: var( --tt-gray-dark-a-600 );
-      --tt-button-active-dropdown-arrows-color-subdued: var( --tt-gray-dark-a-600 );
+      --tt-button-active-dropdown-arrows-color-emphasized: var(--tt-gray-dark-a-600);
+      --tt-button-active-dropdown-arrows-color-subdued: var(--tt-gray-dark-a-600);
       --tt-button-disabled-dropdown-arrows-color: var(--tt-gray-dark-a-400);
     }
   }
@@ -1679,27 +1679,27 @@ code.hljs {
   --tt-badge-border-color-subdued: var(--tt-gray-light-a-200);
   --tt-badge-border-color-emphasized: var(--tt-gray-light-a-600);
   --tt-badge-text-color: var(--tt-gray-light-a-500);
-  --tt-badge-text-color-subdued: var( --tt-gray-light-a-400 );
-  //less important badge --tt-badge-text-color-emphasized: var( --tt-gray-light-a-600 );
+  --tt-badge-text-color-subdued: var(--tt-gray-light-a-400);
+  //less important badge --tt-badge-text-color-emphasized: var(--tt-gray-light-a-600);
   //more important badge --tt-badge-bg-color: var(--white);
   --tt-badge-bg-color-subdued: var(--white);
   //less important badge --tt-badge-bg-color-emphasized: var(--white);
   //more important badge --tt-badge-icon-color: var(--tt-gray-light-a-500);
-  --tt-badge-icon-color-subdued: var( --tt-gray-light-a-400 );
-  //less important badge --tt-badge-icon-color-emphasized: var( --tt-brand-color-600 );
+  --tt-badge-icon-color-subdued: var(--tt-gray-light-a-400);
+  //less important badge --tt-badge-icon-color-emphasized: var(--tt-brand-color-600);
   //more important badge .dark & {
     --tt-badge-border-color: var(--tt-gray-dark-a-200);
     --tt-badge-border-color-subdued: var(--tt-gray-dark-a-200);
     --tt-badge-border-color-emphasized: var(--tt-gray-dark-a-500);
     --tt-badge-text-color: var(--tt-gray-dark-a-500);
-    --tt-badge-text-color-subdued: var( --tt-gray-dark-a-400 );
-    //less important badge --tt-badge-text-color-emphasized: var( --tt-gray-dark-a-600 );
+    --tt-badge-text-color-subdued: var(--tt-gray-dark-a-400);
+    //less important badge --tt-badge-text-color-emphasized: var(--tt-gray-dark-a-600);
     //more important badge --tt-badge-bg-color: var(--black);
     --tt-badge-bg-color-subdued: var(--black);
     //less important badge --tt-badge-bg-color-emphasized: var(--black);
     //more important badge --tt-badge-icon-color: var(--tt-gray-dark-a-500);
-    --tt-badge-icon-color-subdued: var( --tt-gray-dark-a-400 );
-    //less important badge --tt-badge-icon-color-emphasized: var( --tt-brand-color-400 );
+    --tt-badge-icon-color-subdued: var(--tt-gray-dark-a-400);
+    //less important badge --tt-badge-icon-color-emphasized: var(--tt-brand-color-400);
     //more important badge;
   }
   &[data-style=ghost] {
@@ -1707,27 +1707,27 @@ code.hljs {
     --tt-badge-border-color-subdued: var(--tt-gray-light-a-200);
     --tt-badge-border-color-emphasized: var(--tt-gray-light-a-600);
     --tt-badge-text-color: var(--tt-gray-light-a-500);
-    --tt-badge-text-color-subdued: var( --tt-gray-light-a-400 );
-    //less important badge --tt-badge-text-color-emphasized: var( --tt-gray-light-a-600 );
+    --tt-badge-text-color-subdued: var(--tt-gray-light-a-400);
+    //less important badge --tt-badge-text-color-emphasized: var(--tt-gray-light-a-600);
     //more important badge --tt-badge-bg-color: var(--transparent);
     --tt-badge-bg-color-subdued: var(--transparent);
     //less important badge --tt-badge-bg-color-emphasized: var(--transparent);
     //more important badge --tt-badge-icon-color: var(--tt-gray-light-a-500);
-    --tt-badge-icon-color-subdued: var( --tt-gray-light-a-400 );
-    //less important badge --tt-badge-icon-color-emphasized: var( --tt-brand-color-600 );
+    --tt-badge-icon-color-subdued: var(--tt-gray-light-a-400);
+    //less important badge --tt-badge-icon-color-emphasized: var(--tt-brand-color-600);
     //more important badge .dark & {
       --tt-badge-border-color: var(--tt-gray-dark-a-200);
       --tt-badge-border-color-subdued: var(--tt-gray-dark-a-200);
       --tt-badge-border-color-emphasized: var(--tt-gray-dark-a-500);
       --tt-badge-text-color: var(--tt-gray-dark-a-500);
-      --tt-badge-text-color-subdued: var( --tt-gray-dark-a-400 );
-      //less important badge --tt-badge-text-color-emphasized: var( --tt-gray-dark-a-600 );
+      --tt-badge-text-color-subdued: var(--tt-gray-dark-a-400);
+      //less important badge --tt-badge-text-color-emphasized: var(--tt-gray-dark-a-600);
       //more important badge --tt-badge-bg-color: var(--transparent);
       --tt-badge-bg-color-subdued: var(--transparent);
       //less important badge --tt-badge-bg-color-emphasized: var(--transparent);
       //more important badge --tt-badge-icon-color: var(--tt-gray-dark-a-500);
-      --tt-badge-icon-color-subdued: var( --tt-gray-dark-a-400 );
-      //less important badge --tt-badge-icon-color-emphasized: var( --tt-brand-color-400 );
+      --tt-badge-icon-color-subdued: var(--tt-gray-dark-a-400);
+      //less important badge --tt-badge-icon-color-emphasized: var(--tt-brand-color-400);
       //more important badge;
     }
   }
@@ -1736,26 +1736,26 @@ code.hljs {
     --tt-badge-border-color-subdued: var(--tt-gray-light-a-200);
     --tt-badge-border-color-emphasized: var(--tt-gray-light-a-500);
     --tt-badge-text-color: var(--tt-gray-light-a-500);
-    --tt-badge-text-color-subdued: var( --tt-gray-light-a-400 );
+    --tt-badge-text-color-subdued: var(--tt-gray-light-a-400);
     //less important badge --tt-badge-text-color-emphasized: var(--white);
     //more important badge --tt-badge-bg-color: var(--tt-gray-light-a-100);
-    --tt-badge-bg-color-subdued: var( --tt-gray-light-a-50 );
-    //less important badge --tt-badge-bg-color-emphasized: var( --tt-gray-light-a-700 );
+    --tt-badge-bg-color-subdued: var(--tt-gray-light-a-50);
+    //less important badge --tt-badge-bg-color-emphasized: var(--tt-gray-light-a-700);
     //more important badge --tt-badge-icon-color: var(--tt-gray-light-a-500);
-    --tt-badge-icon-color-subdued: var( --tt-gray-light-a-400 );
+    --tt-badge-icon-color-subdued: var(--tt-gray-light-a-400);
     //less important badge --tt-badge-icon-color-emphasized: var(--white);
     //more important badge .dark & {
       --tt-badge-border-color: var(--tt-gray-dark-a-200);
       --tt-badge-border-color-subdued: var(--tt-gray-dark-a-200);
       --tt-badge-border-color-emphasized: var(--tt-gray-dark-a-500);
       --tt-badge-text-color: var(--tt-gray-dark-a-500);
-      --tt-badge-text-color-subdued: var( --tt-gray-dark-a-400 );
+      --tt-badge-text-color-subdued: var(--tt-gray-dark-a-400);
       //less important badge --tt-badge-text-color-emphasized: var(--black);
       //more important badge --tt-badge-bg-color: var(--tt-gray-dark-a-100);
-      --tt-badge-bg-color-subdued: var( --tt-gray-dark-a-50 );
-      //less important badge --tt-badge-bg-color-emphasized: var( --tt-gray-dark-a-800 );
+      --tt-badge-bg-color-subdued: var(--tt-gray-dark-a-50);
+      //less important badge --tt-badge-bg-color-emphasized: var(--tt-gray-dark-a-800);
       //more important badge --tt-badge-icon-color: var(--tt-gray-dark-a-500);
-      --tt-badge-icon-color-subdued: var( --tt-gray-dark-a-400 );
+      --tt-badge-icon-color-subdued: var(--tt-gray-dark-a-400);
       //less important badge --tt-badge-icon-color-emphasized: var(--black);
       //more important badge;
     }
@@ -1765,27 +1765,27 @@ code.hljs {
     --tt-badge-border-color-subdued: var(--tt-color-green-inc-3);
     --tt-badge-border-color-emphasized: var(--tt-color-green-dec-2);
     --tt-badge-text-color: var(--tt-color-green-dec-3);
-    --tt-badge-text-color-subdued: var( --tt-color-green-dec-2 );
-    //less important badge --tt-badge-text-color-emphasized: var( --tt-color-green-inc-5 );
+    --tt-badge-text-color-subdued: var(--tt-color-green-dec-2);
+    //less important badge --tt-badge-text-color-emphasized: var(--tt-color-green-inc-5);
     //more important badge --tt-badge-bg-color: var(--tt-color-green-inc-4);
-    --tt-badge-bg-color-subdued: var( --tt-color-green-inc-5 );
-    //less important badge --tt-badge-bg-color-emphasized: var( --tt-color-green-dec-1 );
+    --tt-badge-bg-color-subdued: var(--tt-color-green-inc-5);
+    //less important badge --tt-badge-bg-color-emphasized: var(--tt-color-green-dec-1);
     //more important badge --tt-badge-icon-color: var(--tt-color-green-dec-3);
-    --tt-badge-icon-color-subdued: var( --tt-color-green-dec-2 );
-    //less important badge --tt-badge-icon-color-emphasized: var( --tt-color-green-inc-5 );
+    --tt-badge-icon-color-subdued: var(--tt-color-green-dec-2);
+    //less important badge --tt-badge-icon-color-emphasized: var(--tt-color-green-inc-5);
     //more important badge .dark & {
       --tt-badge-border-color: var(--tt-color-green-dec-2);
       --tt-badge-border-color-subdued: var(--tt-color-green-dec-3);
       --tt-badge-border-color-emphasized: var(--tt-color-green-base);
       --tt-badge-text-color: var(--tt-color-green-inc-3);
-      --tt-badge-text-color-subdued: var( --tt-color-green-inc-2 );
-      //less important badge --tt-badge-text-color-emphasized: var( --tt-color-green-dec-5 );
+      --tt-badge-text-color-subdued: var(--tt-color-green-inc-2);
+      //less important badge --tt-badge-text-color-emphasized: var(--tt-color-green-dec-5);
       //more important badge --tt-badge-bg-color: var(--tt-color-green-dec-4);
-      --tt-badge-bg-color-subdued: var( --tt-color-green-dec-5 );
-      //less important badge --tt-badge-bg-color-emphasized: var( --tt-color-green-inc-1 );
+      --tt-badge-bg-color-subdued: var(--tt-color-green-dec-5);
+      //less important badge --tt-badge-bg-color-emphasized: var(--tt-color-green-inc-1);
       //more important badge --tt-badge-icon-color: var(--tt-color-green-inc-3);
-      --tt-badge-icon-color-subdued: var( --tt-color-green-inc-2 );
-      //less important badge --tt-badge-icon-color-emphasized: var( --tt-color-green-dec-5 );
+      --tt-badge-icon-color-subdued: var(--tt-color-green-inc-2);
+      //less important badge --tt-badge-icon-color-emphasized: var(--tt-color-green-dec-5);
       //more important badge;
     }
   }
@@ -1794,27 +1794,27 @@ code.hljs {
     --tt-badge-border-color-subdued: var(--tt-color-yellow-inc-3);
     --tt-badge-border-color-emphasized: var(--tt-color-yellow-dec-1);
     --tt-badge-text-color: var(--tt-color-yellow-dec-3);
-    --tt-badge-text-color-subdued: var( --tt-color-yellow-dec-2 );
-    //less important badge --tt-badge-text-color-emphasized: var( --tt-color-yellow-dec-3 );
+    --tt-badge-text-color-subdued: var(--tt-color-yellow-dec-2);
+    //less important badge --tt-badge-text-color-emphasized: var(--tt-color-yellow-dec-3);
     //more important badge --tt-badge-bg-color: var(--tt-color-yellow-inc-4);
-    --tt-badge-bg-color-subdued: var( --tt-color-yellow-inc-5 );
-    //less important badge --tt-badge-bg-color-emphasized: var( --tt-color-yellow-base );
+    --tt-badge-bg-color-subdued: var(--tt-color-yellow-inc-5);
+    //less important badge --tt-badge-bg-color-emphasized: var(--tt-color-yellow-base);
     //more important badge --tt-badge-icon-color: var(--tt-color-yellow-dec-3);
-    --tt-badge-icon-color-subdued: var( --tt-color-yellow-dec-2 );
-    //less important badge --tt-badge-icon-color-emphasized: var( --tt-color-yellow-dec-3 );
+    --tt-badge-icon-color-subdued: var(--tt-color-yellow-dec-2);
+    //less important badge --tt-badge-icon-color-emphasized: var(--tt-color-yellow-dec-3);
     //more important badge .dark & {
       --tt-badge-border-color: var(--tt-color-yellow-dec-2);
       --tt-badge-border-color-subdued: var(--tt-color-yellow-dec-3);
       --tt-badge-border-color-emphasized: var(--tt-color-yellow-inc-1);
       --tt-badge-text-color: var(--tt-color-yellow-inc-3);
-      --tt-badge-text-color-subdued: var( --tt-color-yellow-inc-2 );
-      //less important badge --tt-badge-text-color-emphasized: var( --tt-color-yellow-dec-3 );
+      --tt-badge-text-color-subdued: var(--tt-color-yellow-inc-2);
+      //less important badge --tt-badge-text-color-emphasized: var(--tt-color-yellow-dec-3);
       //more important badge --tt-badge-bg-color: var(--tt-color-yellow-dec-4);
-      --tt-badge-bg-color-subdued: var( --tt-color-yellow-dec-5 );
-      //less important badge --tt-badge-bg-color-emphasized: var( --tt-color-yellow-base );
+      --tt-badge-bg-color-subdued: var(--tt-color-yellow-dec-5);
+      //less important badge --tt-badge-bg-color-emphasized: var(--tt-color-yellow-base);
       //more important badge --tt-badge-icon-color: var(--tt-color-yellow-inc-3);
-      --tt-badge-icon-color-subdued: var( --tt-color-yellow-inc-2 );
-      //less important badge --tt-badge-icon-color-emphasized: var( --tt-color-yellow-dec-3 );
+      --tt-badge-icon-color-subdued: var(--tt-color-yellow-inc-2);
+      //less important badge --tt-badge-icon-color-emphasized: var(--tt-color-yellow-dec-3);
       //more important badge;
     }
   }
@@ -1823,27 +1823,27 @@ code.hljs {
     --tt-badge-border-color-subdued: var(--tt-color-red-inc-3);
     --tt-badge-border-color-emphasized: var(--tt-color-red-dec-2);
     --tt-badge-text-color: var(--tt-color-red-dec-3);
-    --tt-badge-text-color-subdued: var( --tt-color-red-dec-2 );
-    //less important badge --tt-badge-text-color-emphasized: var( --tt-color-red-inc-5 );
+    --tt-badge-text-color-subdued: var(--tt-color-red-dec-2);
+    //less important badge --tt-badge-text-color-emphasized: var(--tt-color-red-inc-5);
     //more important badge --tt-badge-bg-color: var(--tt-color-red-inc-4);
-    --tt-badge-bg-color-subdued: var( --tt-color-red-inc-5 );
-    //less important badge --tt-badge-bg-color-emphasized: var( --tt-color-red-dec-1 );
+    --tt-badge-bg-color-subdued: var(--tt-color-red-inc-5);
+    //less important badge --tt-badge-bg-color-emphasized: var(--tt-color-red-dec-1);
     //more important badge --tt-badge-icon-color: var(--tt-color-red-dec-3);
-    --tt-badge-icon-color-subdued: var( --tt-color-red-dec-2 );
-    //less important badge --tt-badge-icon-color-emphasized: var( --tt-color-red-inc-5 );
+    --tt-badge-icon-color-subdued: var(--tt-color-red-dec-2);
+    //less important badge --tt-badge-icon-color-emphasized: var(--tt-color-red-inc-5);
     //more important badge .dark & {
       --tt-badge-border-color: var(--tt-color-red-dec-2);
       --tt-badge-border-color-subdued: var(--tt-color-red-dec-3);
       --tt-badge-border-color-emphasized: var(--tt-color-red-base);
       --tt-badge-text-color: var(--tt-color-red-inc-3);
-      --tt-badge-text-color-subdued: var( --tt-color-red-inc-2 );
-      //less important badge --tt-badge-text-color-emphasized: var( --tt-color-red-dec-5 );
+      --tt-badge-text-color-subdued: var(--tt-color-red-inc-2);
+      //less important badge --tt-badge-text-color-emphasized: var(--tt-color-red-dec-5);
       //more important badge --tt-badge-bg-color: var(--tt-color-red-dec-4);
-      --tt-badge-bg-color-subdued: var( --tt-color-red-dec-5 );
-      //less important badge --tt-badge-bg-color-emphasized: var( --tt-color-red-inc-1 );
+      --tt-badge-bg-color-subdued: var(--tt-color-red-dec-5);
+      //less important badge --tt-badge-bg-color-emphasized: var(--tt-color-red-inc-1);
       //more important badge --tt-badge-icon-color: var(--tt-color-red-inc-3);
-      --tt-badge-icon-color-subdued: var( --tt-color-red-inc-2 );
-      //less important badge --tt-badge-icon-color-emphasized: var( --tt-color-red-dec-5 );
+      --tt-badge-icon-color-subdued: var(--tt-color-red-inc-2);
+      //less important badge --tt-badge-icon-color-emphasized: var(--tt-color-red-dec-5);
       //more important badge;
     }
   }
@@ -1852,27 +1852,27 @@ code.hljs {
     --tt-badge-border-color-subdued: var(--tt-brand-color-200);
     --tt-badge-border-color-emphasized: var(--tt-brand-color-600);
     --tt-badge-text-color: var(--tt-brand-color-800);
-    --tt-badge-text-color-subdued: var( --tt-brand-color-700 );
-    //less important badge --tt-badge-text-color-emphasized: var( --tt-brand-color-50 );
+    --tt-badge-text-color-subdued: var(--tt-brand-color-700);
+    //less important badge --tt-badge-text-color-emphasized: var(--tt-brand-color-50);
     //more important badge --tt-badge-bg-color: var(--tt-brand-color-100);
-    --tt-badge-bg-color-subdued: var( --tt-brand-color-50 );
-    //less important badge --tt-badge-bg-color-emphasized: var( --tt-brand-color-600 );
+    --tt-badge-bg-color-subdued: var(--tt-brand-color-50);
+    //less important badge --tt-badge-bg-color-emphasized: var(--tt-brand-color-600);
     //more important badge --tt-badge-icon-color: var(--tt-brand-color-800);
-    --tt-badge-icon-color-subdued: var( --tt-brand-color-700 );
-    //less important badge --tt-badge-icon-color-emphasized: var( --tt-brand-color-100 );
+    --tt-badge-icon-color-subdued: var(--tt-brand-color-700);
+    //less important badge --tt-badge-icon-color-emphasized: var(--tt-brand-color-100);
     //more important badge .dark & {
       --tt-badge-border-color: var(--tt-brand-color-700);
       --tt-badge-border-color-subdued: var(--tt-brand-color-800);
       --tt-badge-border-color-emphasized: var(--tt-brand-color-400);
       --tt-badge-text-color: var(--tt-brand-color-200);
-      --tt-badge-text-color-subdued: var( --tt-brand-color-300 );
-      //less important badge --tt-badge-text-color-emphasized: var( --tt-brand-color-950 );
+      --tt-badge-text-color-subdued: var(--tt-brand-color-300);
+      //less important badge --tt-badge-text-color-emphasized: var(--tt-brand-color-950);
       //more important badge --tt-badge-bg-color: var(--tt-brand-color-900);
-      --tt-badge-bg-color-subdued: var( --tt-brand-color-950 );
-      //less important badge --tt-badge-bg-color-emphasized: var( --tt-brand-color-400 );
+      --tt-badge-bg-color-subdued: var(--tt-brand-color-950);
+      //less important badge --tt-badge-bg-color-emphasized: var(--tt-brand-color-400);
       //more important badge --tt-badge-icon-color: var(--tt-brand-color-200);
-      --tt-badge-icon-color-subdued: var( --tt-brand-color-300 );
-      //less important badge --tt-badge-icon-color-emphasized: var( --tt-brand-color-900 );
+      --tt-badge-icon-color-subdued: var(--tt-brand-color-300);
+      //less important badge --tt-badge-icon-color-emphasized: var(--tt-brand-color-900);
       //more important badge;
     }
   }
