@@ -1,0 +1,2277 @@
+@import "https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap";
+
+/* src/tiptap-ui-primitive/tooltip/tooltip.scss */
+.tiptap-tooltip {
+  --tt-tooltip-bg: var(--tt-gray-light-900);
+  --tt-tooltip-text: var(--white);
+  --tt-kbd: var(--tt-gray-dark-a-400);
+  .dark & {
+    --tt-tooltip-bg: var(--white);
+    --tt-tooltip-text: var(--tt-gray-light-600);
+    --tt-kbd: var(--tt-gray-light-a-400);
+  }
+}
+.tiptap-tooltip {
+  z-index: 200;
+  overflow: hidden;
+  border-radius: var(--tt-radius-md, 0.375rem);
+  background-color: var(--tt-tooltip-bg);
+  padding: 0.375rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--tt-tooltip-text);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  text-align: center;
+  kbd {
+    display: inline-block;
+    text-align: center;
+    vertical-align: baseline;
+    font-family:
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial,
+      "Noto Sans",
+      sans-serif;
+    text-transform: capitalize;
+    color: var(--tt-kbd);
+  }
+}
+
+/* src/tiptap-ui-primitive/button/button-colors.scss */
+.tiptap-button {
+  --tt-button-default-bg-color: var(--tt-gray-light-a-100);
+  --tt-button-hover-bg-color: var(--tt-gray-light-200);
+  --tt-button-active-bg-color: var(--tt-gray-light-a-200);
+  --tt-button-active-bg-color-emphasized: var( --tt-brand-color-100 );
+  //more important active state --tt-button-active-bg-color-subdued: var( --tt-gray-light-a-200 );
+  //less important active state --tt-button-active-hover-bg-color: var(--tt-gray-light-300);
+  --tt-button-active-hover-bg-color-emphasized: var( --tt-brand-color-200 );
+  //more important active state hover --tt-button-active-hover-bg-color-subdued: var( --tt-gray-light-a-300 );
+  //less important active state hover --tt-button-disabled-bg-color: var(--tt-gray-light-a-50);
+  .dark & {
+    --tt-button-default-bg-color: var(--tt-gray-dark-a-100);
+    --tt-button-hover-bg-color: var(--tt-gray-dark-200);
+    --tt-button-active-bg-color: var(--tt-gray-dark-a-200);
+    --tt-button-active-bg-color-emphasized: var( --tt-brand-color-900 );
+    //more important active state --tt-button-active-bg-color-subdued: var( --tt-gray-dark-a-200 );
+    //less important active state --tt-button-active-hover-bg-color: var(--tt-gray-dark-300);
+    --tt-button-active-hover-bg-color-emphasized: var( --tt-brand-color-800 );
+    //more important active state hover --tt-button-active-hover-bg-color-subdued: var( --tt-gray-dark-a-300 );
+    //less important active state hover --tt-button-disabled-bg-color: var(--tt-gray-dark-a-50);
+  }
+  --tt-button-default-text-color: var(--tt-gray-light-a-600);
+  --tt-button-hover-text-color: var(--tt-gray-light-a-900);
+  --tt-button-active-text-color: var(--tt-gray-light-a-900);
+  --tt-button-active-text-color-emphasized: var(--tt-gray-light-a-900);
+  --tt-button-active-text-color-subdued: var(--tt-gray-light-a-900);
+  --tt-button-disabled-text-color: var(--tt-gray-light-a-400);
+  .dark & {
+    --tt-button-default-text-color: var(--tt-gray-dark-a-600);
+    --tt-button-hover-text-color: var(--tt-gray-dark-a-900);
+    --tt-button-active-text-color: var(--tt-gray-dark-a-900);
+    --tt-button-active-text-color-emphasized: var(--tt-gray-dark-a-900);
+    --tt-button-active-text-color-subdued: var(--tt-gray-dark-a-900);
+    --tt-button-disabled-text-color: var(--tt-gray-dark-a-300);
+  }
+  --tt-button-default-icon-color: var(--tt-gray-light-a-600);
+  --tt-button-hover-icon-color: var(--tt-gray-light-a-900);
+  --tt-button-active-icon-color: var(--tt-brand-color-500);
+  --tt-button-active-icon-color-emphasized: var(--tt-brand-color-600);
+  --tt-button-active-icon-color-subdued: var(--tt-gray-light-a-900);
+  --tt-button-disabled-icon-color: var(--tt-gray-light-a-400);
+  .dark & {
+    --tt-button-default-icon-color: var(--tt-gray-dark-a-600);
+    --tt-button-hover-icon-color: var(--tt-gray-dark-a-900);
+    --tt-button-active-icon-color: var(--tt-brand-color-400);
+    --tt-button-active-icon-color-emphasized: var(--tt-brand-color-400);
+    --tt-button-active-icon-color-subdued: var(--tt-gray-dark-a-900);
+    --tt-button-disabled-icon-color: var(--tt-gray-dark-a-400);
+  }
+  --tt-button-default-icon-sub-color: var(--tt-gray-light-a-400);
+  --tt-button-hover-icon-sub-color: var(--tt-gray-light-a-500);
+  --tt-button-active-icon-sub-color: var(--tt-gray-light-a-400);
+  --tt-button-active-icon-sub-color-emphasized: var(--tt-gray-light-a-500);
+  --tt-button-active-icon-sub-color-subdued: var(--tt-gray-light-a-400);
+  --tt-button-disabled-icon-sub-color: var(--tt-gray-light-a-100);
+  .dark & {
+    --tt-button-default-icon-sub-color: var(--tt-gray-dark-a-300);
+    --tt-button-hover-icon-sub-color: var(--tt-gray-dark-a-400);
+    --tt-button-active-icon-sub-color: var(--tt-gray-dark-a-300);
+    --tt-button-active-icon-sub-color-emphasized: var(--tt-gray-dark-a-400);
+    --tt-button-active-icon-sub-color-subdued: var(--tt-gray-dark-a-300);
+    --tt-button-disabled-icon-sub-color: var(--tt-gray-dark-a-100);
+  }
+  --tt-button-default-dropdown-arrows-color: var(--tt-gray-light-a-600);
+  --tt-button-hover-dropdown-arrows-color: var(--tt-gray-light-a-700);
+  --tt-button-active-dropdown-arrows-color: var(--tt-gray-light-a-600);
+  --tt-button-active-dropdown-arrows-color-emphasized: var( --tt-gray-light-a-700 );
+  --tt-button-active-dropdown-arrows-color-subdued: var(--tt-gray-light-a-600);
+  --tt-button-disabled-dropdown-arrows-color: var(--tt-gray-light-a-400);
+  .dark & {
+    --tt-button-default-dropdown-arrows-color: var(--tt-gray-dark-a-600);
+    --tt-button-hover-dropdown-arrows-color: var(--tt-gray-dark-a-700);
+    --tt-button-active-dropdown-arrows-color: var(--tt-gray-dark-a-600);
+    --tt-button-active-dropdown-arrows-color-emphasized: var( --tt-gray-dark-a-700 );
+    --tt-button-active-dropdown-arrows-color-subdued: var(--tt-gray-dark-a-600);
+    --tt-button-disabled-dropdown-arrows-color: var(--tt-gray-dark-a-400);
+  }
+  &[data-style=ghost] {
+    --tt-button-default-bg-color: var(--transparent);
+    --tt-button-hover-bg-color: var(--tt-gray-light-200);
+    --tt-button-active-bg-color: var(--tt-gray-light-a-100);
+    --tt-button-active-bg-color-emphasized: var( --tt-brand-color-100 );
+    //more important active state --tt-button-active-bg-color-subdued: var( --tt-gray-light-a-100 );
+    //less important active state --tt-button-active-hover-bg-color: var(--tt-gray-light-200);
+    --tt-button-active-hover-bg-color-emphasized: var( --tt-brand-color-200 );
+    //more important active state hover --tt-button-active-hover-bg-color-subdued: var( --tt-gray-light-a-200 );
+    //less important active state hover --tt-button-disabled-bg-color: var(--transparent);
+    .dark & {
+      --tt-button-default-bg-color: var(--transparent);
+      --tt-button-hover-bg-color: var(--tt-gray-dark-200);
+      --tt-button-active-bg-color: var(--tt-gray-dark-a-100);
+      --tt-button-active-bg-color-emphasized: var( --tt-brand-color-900 );
+      //more important active state --tt-button-active-bg-color-subdued: var( --tt-gray-dark-a-100 );
+      //less important active state --tt-button-active-hover-bg-color: var(--tt-gray-dark-200);
+      --tt-button-active-hover-bg-color-emphasized: var( --tt-brand-color-800 );
+      //more important active state hover --tt-button-active-hover-bg-color-subdued: var( --tt-gray-dark-a-200 );
+      //less important active state hover --tt-button-disabled-bg-color: var(--transparent);
+    }
+    --tt-button-default-text-color: var(--tt-gray-light-a-600);
+    --tt-button-hover-text-color: var(--tt-gray-light-a-900);
+    --tt-button-active-text-color: var(--tt-gray-light-a-900);
+    --tt-button-active-text-color-emphasized: var(--tt-gray-light-a-900);
+    --tt-button-active-text-color-subdued: var(--tt-gray-light-a-900);
+    --tt-button-disabled-text-color: var(--tt-gray-light-a-400);
+    .dark & {
+      --tt-button-default-text-color: var(--tt-gray-dark-a-600);
+      --tt-button-hover-text-color: var(--tt-gray-dark-a-900);
+      --tt-button-active-text-color: var(--tt-gray-dark-a-900);
+      --tt-button-active-text-color-emphasized: var(--tt-gray-dark-a-900);
+      --tt-button-active-text-color-subdued: var(--tt-gray-dark-a-900);
+      --tt-button-disabled-text-color: var(--tt-gray-dark-a-300);
+    }
+    --tt-button-default-icon-color: var(--tt-gray-light-a-600);
+    --tt-button-hover-icon-color: var(--tt-gray-light-a-900);
+    --tt-button-active-icon-color: var(--tt-brand-color-500);
+    --tt-button-active-icon-color-emphasized: var(--tt-brand-color-600);
+    --tt-button-active-icon-color-subdued: var(--tt-gray-light-a-900);
+    --tt-button-disabled-icon-color: var(--tt-gray-light-a-400);
+    .dark & {
+      --tt-button-default-icon-color: var(--tt-gray-dark-a-600);
+      --tt-button-hover-icon-color: var(--tt-gray-dark-a-900);
+      --tt-button-active-icon-color: var(--tt-brand-color-400);
+      --tt-button-active-icon-color-emphasized: var(--tt-brand-color-300);
+      --tt-button-active-icon-color-subdued: var(--tt-gray-dark-a-900);
+      --tt-button-disabled-icon-color: var(--tt-gray-dark-a-400);
+    }
+    --tt-button-default-icon-sub-color: var(--tt-gray-light-a-400);
+    --tt-button-hover-icon-sub-color: var(--tt-gray-light-a-500);
+    --tt-button-active-icon-sub-color: var(--tt-gray-light-a-400);
+    --tt-button-active-icon-sub-color-emphasized: var(--tt-gray-light-a-500);
+    --tt-button-active-icon-sub-color-subdued: var(--tt-gray-light-a-400);
+    --tt-button-disabled-icon-sub-color: var(--tt-gray-light-a-100);
+    .dark & {
+      --tt-button-default-icon-sub-color: var(--tt-gray-dark-a-300);
+      --tt-button-hover-icon-sub-color: var(--tt-gray-dark-a-400);
+      --tt-button-active-icon-sub-color: var(--tt-gray-dark-a-300);
+      --tt-button-active-icon-sub-color-emphasized: var(--tt-gray-dark-a-400);
+      --tt-button-active-icon-sub-color-subdued: var(--tt-gray-dark-a-300);
+      --tt-button-disabled-icon-sub-color: var(--tt-gray-dark-a-100);
+    }
+    --tt-button-default-dropdown-arrows-color: var(--tt-gray-light-a-600);
+    --tt-button-hover-dropdown-arrows-color: var(--tt-gray-light-a-700);
+    --tt-button-active-dropdown-arrows-color: var(--tt-gray-light-a-600);
+    --tt-button-active-dropdown-arrows-color-emphasized: var( --tt-gray-light-a-700 );
+    --tt-button-active-dropdown-arrows-color-subdued: var( --tt-gray-light-a-600 );
+    --tt-button-disabled-dropdown-arrows-color: var(--tt-gray-light-a-400);
+    .dark & {
+      --tt-button-default-dropdown-arrows-color: var(--tt-gray-dark-a-600);
+      --tt-button-hover-dropdown-arrows-color: var(--tt-gray-dark-a-700);
+      --tt-button-active-dropdown-arrows-color: var(--tt-gray-dark-a-600);
+      --tt-button-active-dropdown-arrows-color-emphasized: var( --tt-gray-dark-a-700 );
+      --tt-button-active-dropdown-arrows-color-subdued: var( --tt-gray-dark-a-600 );
+      --tt-button-disabled-dropdown-arrows-color: var(--tt-gray-dark-a-400);
+    }
+  }
+  &[data-style=primary] {
+    --tt-button-default-bg-color: var(--tt-brand-color-500);
+    --tt-button-hover-bg-color: var(--tt-brand-color-600);
+    --tt-button-active-bg-color: var(--tt-brand-color-100);
+    --tt-button-active-bg-color-emphasized: var( --tt-brand-color-100 );
+    //more important active state --tt-button-active-bg-color-subdued: var( --tt-brand-color-100 );
+    //less important active state --tt-button-active-hover-bg-color: var(--tt-brand-color-200);
+    --tt-button-active-hover-bg-color-emphasized: var( --tt-brand-color-200 );
+    //more important active state hover --tt-button-active-hover-bg-color-subdued: var( --tt-brand-color-200 );
+    //less important active state hover --tt-button-disabled-bg-color: var(--tt-gray-light-a-100);
+    .dark & {
+      --tt-button-default-bg-color: var(--tt-brand-color-500);
+      --tt-button-hover-bg-color: var(--tt-brand-color-600);
+      --tt-button-active-bg-color: var(--tt-brand-color-900);
+      --tt-button-active-bg-color-emphasized: var( --tt-brand-color-900 );
+      //more important active state --tt-button-active-bg-color-subdued: var( --tt-brand-color-900 );
+      //less important active state --tt-button-active-hover-bg-color: var(--tt-brand-color-800);
+      --tt-button-active-hover-bg-color-emphasized: var( --tt-brand-color-800 );
+      //more important active state hover --tt-button-active-hover-bg-color-subdued: var( --tt-brand-color-800 );
+      //less important active state hover --tt-button-disabled-bg-color: var(--tt-gray-dark-a-100);
+    }
+    --tt-button-default-text-color: var(--white);
+    --tt-button-hover-text-color: var(--white);
+    --tt-button-active-text-color: var(--tt-gray-light-a-900);
+    --tt-button-active-text-color-emphasized: var(--tt-gray-light-a-900);
+    --tt-button-active-text-color-subdued: var(--tt-gray-light-a-900);
+    --tt-button-disabled-text-color: var(--tt-gray-light-a-400);
+    .dark & {
+      --tt-button-default-text-color: var(--white);
+      --tt-button-hover-text-color: var(--white);
+      --tt-button-active-text-color: var(--tt-gray-dark-a-900);
+      --tt-button-active-text-color-emphasized: var(--tt-gray-dark-a-900);
+      --tt-button-active-text-color-subdued: var(--tt-gray-dark-a-900);
+      --tt-button-disabled-text-color: var(--tt-gray-dark-a-300);
+    }
+    --tt-button-default-icon-color: var(--white);
+    --tt-button-hover-icon-color: var(--white);
+    --tt-button-active-icon-color: var(--tt-brand-color-600);
+    --tt-button-active-icon-color-emphasized: var(--tt-brand-color-600);
+    --tt-button-active-icon-color-subdued: var(--tt-brand-color-600);
+    --tt-button-disabled-icon-color: var(--tt-gray-light-a-400);
+    .dark & {
+      --tt-button-default-icon-color: var(--white);
+      --tt-button-hover-icon-color: var(--white);
+      --tt-button-active-icon-color: var(--tt-brand-color-400);
+      --tt-button-active-icon-color-emphasized: var(--tt-brand-color-400);
+      --tt-button-active-icon-color-subdued: var(--tt-brand-color-400);
+      --tt-button-disabled-icon-color: var(--tt-gray-dark-a-300);
+    }
+    --tt-button-default-icon-sub-color: var(--tt-gray-dark-a-500);
+    --tt-button-hover-icon-sub-color: var(--tt-gray-dark-a-500);
+    --tt-button-active-icon-sub-color: var(--tt-gray-light-a-500);
+    --tt-button-active-icon-sub-color-emphasized: var(--tt-gray-light-a-500);
+    --tt-button-active-icon-sub-color-subdued: var(--tt-gray-light-a-500);
+    --tt-button-disabled-icon-sub-color: var(--tt-gray-light-a-100);
+    .dark & {
+      --tt-button-default-icon-sub-color: var(--tt-gray-dark-a-400);
+      --tt-button-hover-icon-sub-color: var(--tt-gray-dark-a-500);
+      --tt-button-active-icon-sub-color: var(--tt-gray-dark-a-300);
+      --tt-button-active-icon-sub-color-emphasized: var(--tt-gray-dark-a-400);
+      --tt-button-active-icon-sub-color-subdued: var(--tt-gray-dark-a-300);
+      --tt-button-disabled-icon-sub-color: var(--tt-gray-dark-a-100);
+    }
+    --tt-button-default-dropdown-arrows-color: var(--white);
+    --tt-button-hover-dropdown-arrows-color: var(--white);
+    --tt-button-active-dropdown-arrows-color: var(--tt-gray-light-a-700);
+    --tt-button-active-dropdown-arrows-color-emphasized: var( --tt-gray-light-a-700 );
+    --tt-button-active-dropdown-arrows-color-subdued: var( --tt-gray-light-a-700 );
+    --tt-button-disabled-dropdown-arrows-color: var(--tt-gray-light-a-400);
+    .dark & {
+      --tt-button-default-dropdown-arrows-color: var(--white);
+      --tt-button-hover-dropdown-arrows-color: var(--white);
+      --tt-button-active-dropdown-arrows-color: var(--tt-gray-dark-a-600);
+      --tt-button-active-dropdown-arrows-color-emphasized: var( --tt-gray-dark-a-600 );
+      --tt-button-active-dropdown-arrows-color-subdued: var( --tt-gray-dark-a-600 );
+      --tt-button-disabled-dropdown-arrows-color: var(--tt-gray-dark-a-400);
+    }
+  }
+}
+
+/* src/tiptap-ui-primitive/button/button-group.scss */
+.tiptap-button-group {
+  position: relative;
+  display: flex;
+  vertical-align: middle;
+  &[data-orientation=vertical] {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: max-content;
+    > .tiptap-button {
+      width: 100%;
+    }
+  }
+  &[data-orientation=horizontal] {
+    gap: 0.125rem;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* src/tiptap-ui-primitive/button/button.scss */
+.tiptap-button {
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-feature-settings: "salt" on, "cv01" on;
+  line-height: 1.15;
+  height: 2rem;
+  min-width: 2rem;
+  border: none;
+  padding: 0.5rem;
+  gap: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--tt-radius-lg, 0.75rem);
+  transition-property:
+    background,
+    color,
+    opacity;
+  transition-duration: var(--tt-transition-duration-default);
+  transition-timing-function: var(--tt-transition-easing-default);
+  // focus-visible &:focus-visible {
+    outline: none;
+  }
+  &[data-highlighted=true],
+  &[data-focus-visible=true] {
+    background-color: var(--tt-button-hover-bg-color);
+    color: var(--tt-button-hover-text-color);
+    // outline: 2px solid var(--tt-button-active-icon-color);
+  }
+  &[data-weight=small] {
+    width: 1.5rem;
+    min-width: 1.5rem;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  &[data-size=large] {
+    font-size: 0.9375rem;
+    height: 2.375rem;
+    min-width: 2.375rem;
+    padding: 0.625rem;
+  }
+  &[data-size=small] {
+    font-size: 0.75rem;
+    line-height: 1.2;
+    height: 1.5rem;
+    min-width: 1.5rem;
+    padding: 0.3125rem;
+    border-radius: var(--tt-radius-md, 0.5rem);
+  }
+  .tiptap-button-text {
+    padding: 0 0.125rem;
+    flex-grow: 1;
+    text-align: left;
+    line-height: 1.5rem;
+  }
+  &[data-text-trim=on] {
+    .tiptap-button-text {
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+  .tiptap-button-icon,
+  .tiptap-button-icon-sub,
+  .tiptap-button-dropdown-arrows,
+  .tiptap-button-dropdown-small {
+    flex-shrink: 0;
+  }
+  .tiptap-button-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  &[data-size=large] .tiptap-button-icon {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+  &[data-size=small] .tiptap-button-icon {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+  .tiptap-button-icon-sub {
+    width: 1rem;
+    height: 1rem;
+  }
+  &[data-size=large] .tiptap-button-icon-sub {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+  &[data-size=small] .tiptap-button-icon-sub {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+  .tiptap-button-dropdown-arrows {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+  &[data-size=large] .tiptap-button-dropdown-arrows {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+  &[data-size=small] .tiptap-button-dropdown-arrows {
+    width: 0.625rem;
+    height: 0.625rem;
+  }
+  .tiptap-button-dropdown-small {
+    width: 0.625rem;
+    height: 0.625rem;
+  }
+  &[data-size=large] .tiptap-button-dropdown-small {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+  &[data-size=small] .tiptap-button-dropdown-small {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  &:has(> svg):not(:has(> :not(svg))) {
+    gap: 0.125rem;
+    &[data-size=large],
+    &[data-size=small] {
+      gap: 0.125rem;
+    }
+  }
+  &:has(> svg:nth-of-type(2)):has(> .tiptap-button-dropdown-small):not(:has(> svg:nth-of-type(3))):not(:has(> .tiptap-button-text)) {
+    gap: 0;
+    padding-right: 0.25rem;
+    &[data-size=large] {
+      padding-right: 0.375rem;
+    }
+    &[data-size=small] {
+      padding-right: 0.25rem;
+    }
+  }
+  .tiptap-button-emoji {
+    width: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  &[data-size=large] .tiptap-button-emoji {
+    width: 1.125rem;
+  }
+  &[data-size=small] .tiptap-button-emoji {
+    width: 0.875rem;
+  }
+}
+.tiptap-button {
+  background-color: var(--tt-button-default-bg-color);
+  color: var(--tt-button-default-text-color);
+  .tiptap-button-icon {
+    color: var(--tt-button-default-icon-color);
+  }
+  .tiptap-button-icon-sub {
+    color: var(--tt-button-default-icon-sub-color);
+  }
+  .tiptap-button-dropdown-arrows {
+    color: var(--tt-button-default-dropdown-arrows-color);
+  }
+  .tiptap-button-dropdown-small {
+    color: var(--tt-button-default-dropdown-arrows-color);
+  }
+  &:hover:not([data-active-item=true]):not([disabled]),
+  &[data-active-item=true]:not([disabled]),
+  &[data-highlighted]:not([disabled]):not([data-highlighted=false]) {
+    background-color: var(--tt-button-hover-bg-color);
+    color: var(--tt-button-hover-text-color);
+    .tiptap-button-icon {
+      color: var(--tt-button-hover-icon-color);
+    }
+    .tiptap-button-icon-sub {
+      color: var(--tt-button-hover-icon-sub-color);
+    }
+    .tiptap-button-dropdown-arrows,
+    .tiptap-button-dropdown-small {
+      color: var(--tt-button-hover-dropdown-arrows-color);
+    }
+  }
+  &[data-active-state=on]:not([disabled]),
+  &[data-state=open]:not([disabled]) {
+    background-color: var(--tt-button-active-bg-color);
+    color: var(--tt-button-active-text-color);
+    .tiptap-button-icon {
+      color: var(--tt-button-active-icon-color);
+    }
+    .tiptap-button-icon-sub {
+      color: var(--tt-button-active-icon-sub-color);
+    }
+    .tiptap-button-dropdown-arrows,
+    .tiptap-button-dropdown-small {
+      color: var(--tt-button-active-dropdown-arrows-color);
+    }
+    &:hover {
+      background-color: var(--tt-button-active-hover-bg-color);
+    }
+    &[data-appearance=emphasized] {
+      background-color: var(--tt-button-active-bg-color-emphasized);
+      color: var(--tt-button-active-text-color-emphasized);
+      .tiptap-button-icon {
+        color: var(--tt-button-active-icon-color-emphasized);
+      }
+      .tiptap-button-icon-sub {
+        color: var(--tt-button-active-icon-sub-color-emphasized);
+      }
+      .tiptap-button-dropdown-arrows,
+      .tiptap-button-dropdown-small {
+        color: var(--tt-button-active-dropdown-arrows-color-emphasized);
+      }
+      &:hover {
+        background-color: var(--tt-button-active-hover-bg-color-emphasized);
+      }
+    }
+    &[data-appearance=subdued] {
+      background-color: var(--tt-button-active-bg-color-subdued);
+      color: var(--tt-button-active-text-color-subdued);
+      .tiptap-button-icon {
+        color: var(--tt-button-active-icon-color-subdued);
+      }
+      .tiptap-button-icon-sub {
+        color: var(--tt-button-active-icon-sub-color-subdued);
+      }
+      .tiptap-button-dropdown-arrows,
+      .tiptap-button-dropdown-small {
+        color: var(--tt-button-active-dropdown-arrows-color-subdued);
+      }
+      &:hover {
+        background-color: var(--tt-button-active-hover-bg-color-subdued);
+        .tiptap-button-icon {
+          color: var(--tt-button-active-icon-color-subdued);
+        }
+      }
+    }
+  }
+  &:disabled {
+    background-color: var(--tt-button-disabled-bg-color);
+    color: var(--tt-button-disabled-text-color);
+    .tiptap-button-icon {
+      color: var(--tt-button-disabled-icon-color);
+    }
+  }
+}
+
+/* src/tiptap-node/image-upload-node/image-upload-node.scss */
+:root {
+  --tiptap-image-upload-active: var(--tt-brand-color-500);
+  --tiptap-image-upload-progress-bg: var(--tt-brand-color-50);
+  --tiptap-image-upload-icon-bg: var(--tt-brand-color-500);
+  --tiptap-image-upload-text-color: var(--tt-gray-light-a-700);
+  --tiptap-image-upload-subtext-color: var(--tt-gray-light-a-400);
+  --tiptap-image-upload-border: var(--tt-gray-light-a-300);
+  --tiptap-image-upload-border-hover: var(--tt-gray-light-a-400);
+  --tiptap-image-upload-border-active: var(--tt-brand-color-500);
+  --tiptap-image-upload-icon-doc-bg: var(--tt-gray-light-a-200);
+  --tiptap-image-upload-icon-doc-border: var(--tt-gray-light-300);
+  --tiptap-image-upload-icon-color: var(--white);
+}
+.dark {
+  --tiptap-image-upload-active: var(--tt-brand-color-400);
+  --tiptap-image-upload-progress-bg: var(--tt-brand-color-900);
+  --tiptap-image-upload-icon-bg: var(--tt-brand-color-400);
+  --tiptap-image-upload-text-color: var(--tt-gray-dark-a-700);
+  --tiptap-image-upload-subtext-color: var(--tt-gray-dark-a-400);
+  --tiptap-image-upload-border: var(--tt-gray-dark-a-300);
+  --tiptap-image-upload-border-hover: var(--tt-gray-dark-a-400);
+  --tiptap-image-upload-border-active: var(--tt-brand-color-400);
+  --tiptap-image-upload-icon-doc-bg: var(--tt-gray-dark-a-200);
+  --tiptap-image-upload-icon-doc-border: var(--tt-gray-dark-300);
+  --tiptap-image-upload-icon-color: var(--black);
+}
+.tiptap-image-upload {
+  margin: 2rem 0;
+  input[type=file] {
+    display: none;
+  }
+  .tiptap-image-upload-dropzone {
+    position: relative;
+    width: 3.125rem;
+    height: 3.75rem;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .tiptap-image-upload-icon-container {
+    position: absolute;
+    width: 1.75rem;
+    height: 1.75rem;
+    bottom: 0;
+    right: 0;
+    background-color: var(--tiptap-image-upload-icon-bg);
+    border-radius: var(--tt-radius-lg, 0.75rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tiptap-image-upload-icon {
+    width: 0.875rem;
+    height: 0.875rem;
+    color: var(--tiptap-image-upload-icon-color);
+  }
+  .tiptap-image-upload-dropzone-rect-primary {
+    color: var(--tiptap-image-upload-icon-doc-bg);
+    position: absolute;
+  }
+  .tiptap-image-upload-dropzone-rect-secondary {
+    position: absolute;
+    top: 0;
+    right: 0.25rem;
+    bottom: 0;
+    color: var(--tiptap-image-upload-icon-doc-border);
+  }
+  .tiptap-image-upload-text {
+    color: var(--tiptap-image-upload-text-color);
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: normal;
+    em {
+      font-style: normal;
+      text-decoration: underline;
+    }
+  }
+  .tiptap-image-upload-subtext {
+    color: var(--tiptap-image-upload-subtext-color);
+    font-weight: 600;
+    line-height: normal;
+    font-size: 0.75rem;
+  }
+  .tiptap-image-upload-drag-area {
+    padding: 2rem 1.5rem;
+    border: 1.5px dashed var(--tiptap-image-upload-border);
+    border-radius: var(--tt-radius-md, 0.5rem);
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    &:hover {
+      border-color: var(--tiptap-image-upload-border-hover);
+    }
+    &.drag-active {
+      border-color: var(--tiptap-image-upload-border-active);
+      background-color: rgba(var(--tiptap-image-upload-active-rgb, 0, 123, 255), 0.05);
+    }
+    &.drag-over {
+      border-color: var(--tiptap-image-upload-border-active);
+      background-color: rgba(var(--tiptap-image-upload-active-rgb, 0, 123, 255), 0.1);
+    }
+  }
+  .tiptap-image-upload-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.25rem;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .tiptap-image-upload-previews {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .tiptap-image-upload-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--tiptap-image-upload-border);
+    margin-bottom: 0.5rem;
+    span {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--tiptap-image-upload-text-color);
+    }
+  }
+  // === Individual File Preview Styles === .tiptap-image-upload-preview {
+    position: relative;
+    border-radius: var(--tt-radius-md, 0.5rem);
+    overflow: hidden;
+    .tiptap-image-upload-progress {
+      position: absolute;
+      inset: 0;
+      background-color: var(--tiptap-image-upload-progress-bg);
+      transition: all 300ms ease-out;
+    }
+    .tiptap-image-upload-preview-content {
+      position: relative;
+      border: 1px solid var(--tiptap-image-upload-border);
+      border-radius: var(--tt-radius-md, 0.5rem);
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .tiptap-image-upload-file-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      height: 2rem;
+      .tiptap-image-upload-file-icon {
+        padding: 0.5rem;
+        background-color: var(--tiptap-image-upload-icon-bg);
+        border-radius: var(--tt-radius-lg, 0.75rem);
+        svg {
+          width: 0.875rem;
+          height: 0.875rem;
+          color: var(--tiptap-image-upload-icon-color);
+        }
+      }
+    }
+    .tiptap-image-upload-details {
+      display: flex;
+      flex-direction: column;
+    }
+    .tiptap-image-upload-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      .tiptap-image-upload-progress-text {
+        font-size: 0.75rem;
+        color: var(--tiptap-image-upload-border-active);
+        font-weight: 600;
+      }
+    }
+  }
+}
+.tiptap.ProseMirror.ProseMirror-focused {
+  .ProseMirror-selectednode .tiptap-image-upload-drag-area {
+    border-color: var(--tiptap-image-upload-active);
+  }
+}
+@media (max-width: 480px) {
+  .tiptap-image-upload {
+    .tiptap-image-upload-drag-area {
+      padding: 1.5rem 1rem;
+    }
+    .tiptap-image-upload-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .tiptap-image-upload-preview-content {
+      padding: 0.75rem;
+    }
+  }
+}
+
+/* src/tiptap-ui-primitive/input/input.scss */
+:root {
+  --tiptap-input-placeholder: var(--tt-gray-light-a-400);
+}
+.dark {
+  --tiptap-input-placeholder: var(--tt-gray-dark-a-400);
+}
+.tiptap-input {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.375rem 0.5rem;
+  border-radius: 0.375rem;
+  background: none;
+  appearance: none;
+  outline: none;
+  &::placeholder {
+    color: var(--tiptap-input-placeholder);
+  }
+}
+.tiptap-input-clamp {
+  min-width: 12rem;
+  padding-right: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  &:focus {
+    text-overflow: clip;
+    overflow: visible;
+  }
+}
+.tiptap-input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+/* src/tiptap-node/youtube-node/youtube-node.scss */
+.tiptap-youtube-node {
+  margin: 1.5em 0;
+  border: 1px solid var(--tt-border-color);
+  border-radius: var(--tt-radius-md);
+  overflow: hidden;
+  background-color: var(--tt-card-bg-color);
+  &[data-drag-handle] {
+    cursor: grab;
+    &:active {
+      cursor: grabbing;
+    }
+  }
+}
+.tiptap-youtube-node-editor {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  input {
+    width: 100%;
+  }
+}
+.tiptap-youtube-node-actions {
+  display: flex;
+  gap: 0.5em;
+  justify-content: flex-end;
+}
+.tiptap-youtube-node-container {
+  display: flex;
+  flex-direction: column;
+}
+.tiptap-youtube-node-toolbar {
+  display: flex;
+  gap: 0.25em;
+  padding: 0.5em;
+  background-color: var(--tt-sidebar-bg-color);
+  border-bottom: 1px solid var(--tt-border-color);
+  justify-content: flex-end;
+}
+.tiptap-youtube-node-embed {
+  width: 100%;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+}
+.tiptap-youtube-node-placeholder {
+  padding: 3em 1em;
+  text-align: center;
+  color: var(--tt-color-text-gray);
+  p {
+    margin: 0 0 1em 0;
+  }
+}
+
+/* src/tiptap-node/figma-node/figma-node.scss */
+.tiptap-figma-node {
+  margin: 1.5em 0;
+  border: 1px solid var(--tt-border-color);
+  border-radius: var(--tt-radius-md);
+  overflow: hidden;
+  background-color: var(--tt-card-bg-color);
+  &[data-drag-handle] {
+    cursor: grab;
+    &:active {
+      cursor: grabbing;
+    }
+  }
+}
+.tiptap-figma-node-editor {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  input {
+    width: 100%;
+  }
+}
+.tiptap-figma-node-actions {
+  display: flex;
+  gap: 0.5em;
+  justify-content: flex-end;
+}
+.tiptap-figma-node-container {
+  display: flex;
+  flex-direction: column;
+}
+.tiptap-figma-node-toolbar {
+  display: flex;
+  gap: 0.25em;
+  padding: 0.5em;
+  background-color: var(--tt-sidebar-bg-color);
+  border-bottom: 1px solid var(--tt-border-color);
+  justify-content: flex-end;
+}
+.tiptap-figma-node-embed {
+  width: 100%;
+  min-height: 450px;
+  position: relative;
+  iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    display: block;
+  }
+}
+.tiptap-figma-node-placeholder {
+  padding: 3em 1em;
+  text-align: center;
+  color: var(--tt-color-text-gray);
+  p {
+    margin: 0 0 1em 0;
+  }
+}
+
+/* src/tiptap-ui-primitive/separator/separator.scss */
+.tiptap-separator {
+  --tt-link-border-color: var(--tt-gray-light-a-200);
+  .dark & {
+    --tt-link-border-color: var(--tt-gray-dark-a-200);
+  }
+}
+.tiptap-separator {
+  flex-shrink: 0;
+  background-color: var(--tt-link-border-color);
+  &[data-orientation=horizontal] {
+    height: 1px;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  &[data-orientation=vertical] {
+    height: 1.5rem;
+    width: 1px;
+  }
+}
+
+/* src/tiptap-ui-primitive/toolbar/toolbar.scss */
+:root {
+  --tt-toolbar-height: 2.75rem;
+  --tt-safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --tt-toolbar-bg-color: var(--white);
+  --tt-toolbar-border-color: var(--tt-gray-light-a-100);
+}
+.dark {
+  --tt-toolbar-bg-color: var(--black);
+  --tt-toolbar-border-color: var(--tt-gray-dark-a-50);
+}
+.tiptap-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  &-group {
+    display: flex;
+    align-items: center;
+    gap: 0.125rem;
+    &:empty {
+      display: none;
+    }
+    &:empty + .tiptap-separator,
+    .tiptap-separator + &:empty {
+      display: none;
+    }
+  }
+  &[data-variant=fixed] {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    min-height: var(--tt-toolbar-height);
+    background: var(--tt-toolbar-bg-color);
+    border-bottom: 1px solid var(--tt-toolbar-border-color);
+    padding: 0 0.5rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @media (max-width: 480px) {
+      position: absolute;
+      top: auto;
+      height: calc(var(--tt-toolbar-height) + var(--tt-safe-area-bottom));
+      border-top: 1px solid var(--tt-toolbar-border-color);
+      border-bottom: none;
+      padding: 0 0.5rem var(--tt-safe-area-bottom);
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      .tiptap-toolbar-group {
+        flex: 0 0 auto;
+      }
+    }
+  }
+  &[data-variant=floating] {
+    --tt-toolbar-padding: 0.125rem;
+    --tt-toolbar-border-width: 1px;
+    padding: 0.188rem;
+    border-radius: calc(var(--tt-toolbar-padding) + var(--tt-radius-lg) + var(--tt-toolbar-border-width));
+    border: var(--tt-toolbar-border-width) solid var(--tt-toolbar-border-color);
+    background-color: var(--tt-toolbar-bg-color);
+    box-shadow: var(--tt-shadow-elevated-md);
+    outline: none;
+    overflow: hidden;
+    &[data-plain=true] {
+      padding: 0;
+      border-radius: 0;
+      border: none;
+      box-shadow: none;
+      background-color: transparent;
+    }
+    @media screen and (max-width: 480px) {
+      width: 100%;
+      border-radius: 0;
+      border: none;
+      box-shadow: none;
+    }
+  }
+}
+
+/* src/tiptap-node/blockquote-node/blockquote-node.scss */
+.tiptap.ProseMirror {
+  --blockquote-bg-color: var(--tt-gray-light-900);
+  .dark & {
+    --blockquote-bg-color: var(--tt-gray-dark-900);
+  }
+}
+.tiptap.ProseMirror {
+  blockquote {
+    position: relative;
+    padding-left: 1em;
+    padding-top: 0.375em;
+    padding-bottom: 0.375em;
+    margin: 1.5rem 0;
+    p {
+      margin-top: 0;
+    }
+    &::before,
+    &.is-empty::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 0.25em;
+      background-color: var(--blockquote-bg-color);
+      content: "";
+      border-radius: 0;
+    }
+  }
+}
+
+/* src/tiptap-node/code-block-node/code-block-node.scss */
+.tiptap.ProseMirror {
+  --tt-inline-code-bg-color: var(--tt-gray-light-a-100);
+  --tt-inline-code-text-color: var(--tt-gray-light-a-700);
+  --tt-inline-code-border-color: var(--tt-gray-light-a-200);
+  --tt-codeblock-bg: var(--tt-gray-light-a-50);
+  --tt-codeblock-text: var(--tt-gray-light-a-800);
+  --tt-codeblock-border: var(--tt-gray-light-a-200);
+  .dark & {
+    --tt-inline-code-bg-color: var(--tt-gray-dark-a-100);
+    --tt-inline-code-text-color: var(--tt-gray-dark-a-700);
+    --tt-inline-code-border-color: var(--tt-gray-dark-a-200);
+    --tt-codeblock-bg: var(--tt-gray-dark-a-50);
+    --tt-codeblock-text: var(--tt-gray-dark-a-800);
+    --tt-codeblock-border: var(--tt-gray-dark-a-200);
+  }
+}
+.tiptap.ProseMirror {
+  // Inline code code {
+    background-color: var(--tt-inline-code-bg-color);
+    color: var(--tt-inline-code-text-color);
+    border: 1px solid var(--tt-inline-code-border-color);
+    font-family: "JetBrains Mono NL", monospace;
+    font-size: 0.875em;
+    line-height: 1.4;
+    border-radius: 6px/0.375rem;
+    padding: 0.1em 0.2em;
+  }
+  // Code blocks pre {
+    background-color: var(--tt-codeblock-bg);
+    color: var(--tt-codeblock-text);
+    border: 1px solid var(--tt-codeblock-border);
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    font-size: 1rem;
+    border-radius: 6px/0.375rem;
+    overflow-x: auto;
+    code {
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+      -webkit-text-fill-color: inherit;
+      color: inherit;
+      padding: 0;
+      font-family:
+        "JetBrains Mono NL",
+        "Fira Code",
+        "Consolas",
+        "Monaco",
+        "Courier New",
+        monospace;
+    }
+    // Highlight.js syntax highlighting styles .hljs {
+      background: transparent !important;
+      color: inherit;
+      display: block;
+      overflow-x: auto;
+      padding: 0;
+    }
+    // Preserve highlight.js token colors .hljs-keyword, .hljs-selector-tag, .hljs-literal, .hljs-section, .hljs-link {
+      color: inherit;
+    }
+  }
+}
+// Dark mode specific styles for code blocks .dark .tiptap.ProseMirror {
+  pre {
+    // Ensure highlight.js colors work in dark mode .hljs {
+      background: transparent !important;
+    }
+    // Override highlight.js colors for dark mode .hljs-keyword, .hljs-selector-tag, .hljs-literal, .hljs-section, .hljs-link {
+      color: #c792ea;
+    }
+    .hljs-function,
+    .hljs-title {
+      color: #82aaff;
+    }
+    .hljs-string,
+    .hljs-attr {
+      color: #c3e88d;
+    }
+    .hljs-number,
+    .hljs-literal {
+      color: #f78c6c;
+    }
+    .hljs-comment,
+    .hljs-quote {
+      color: #546e7a;
+      font-style: italic;
+    }
+    .hljs-variable,
+    .hljs-template-variable {
+      color: #f07178;
+    }
+    .hljs-type,
+    .hljs-class {
+      color: #ffcb6b;
+    }
+    .hljs-tag,
+    .hljs-name,
+    .hljs-attribute {
+      color: #f07178;
+    }
+    .hljs-regexp,
+    .hljs-link {
+      color: #c792ea;
+    }
+    .hljs-built_in,
+    .hljs-builtin-name {
+      color: #ffcb6b;
+    }
+    .hljs-meta {
+      color: #546e7a;
+    }
+    .hljs-deletion {
+      background: #ff5370;
+    }
+    .hljs-addition {
+      background: #c3e88d;
+    }
+    .hljs-emphasis {
+      font-style: italic;
+    }
+    .hljs-strong {
+      font-weight: bold;
+    }
+  }
+}
+
+/* src/tiptap-node/horizontal-rule-node/horizontal-rule-node.scss */
+.tiptap.ProseMirror {
+  --horizontal-rule-color: var(--tt-gray-light-a-200);
+  .dark & {
+    --horizontal-rule-color: var(--tt-gray-dark-a-200);
+  }
+}
+.tiptap.ProseMirror {
+  hr {
+    border: none;
+    height: 1px;
+    background-color: var(--horizontal-rule-color);
+  }
+  [data-type=horizontalRule] {
+    margin-top: 2.25em;
+    margin-bottom: 2.25em;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+/* src/tiptap-node/list-node/list-node.scss */
+.tiptap.ProseMirror {
+  --tt-checklist-bg-color: var(--tt-gray-light-a-100);
+  --tt-checklist-bg-active-color: var(--tt-gray-light-a-900);
+  --tt-checklist-border-color: var(--tt-gray-light-a-200);
+  --tt-checklist-border-active-color: var(--tt-gray-light-a-900);
+  --tt-checklist-check-icon-color: var(--white);
+  --tt-checklist-text-active: var(--tt-gray-light-a-500);
+  .dark & {
+    --tt-checklist-bg-color: var(--tt-gray-dark-a-100);
+    --tt-checklist-bg-active-color: var(--tt-gray-dark-a-900);
+    --tt-checklist-border-color: var(--tt-gray-dark-a-200);
+    --tt-checklist-border-active-color: var(--tt-gray-dark-a-900);
+    --tt-checklist-check-icon-color: var(--black);
+    --tt-checklist-text-active: var(--tt-gray-dark-a-500);
+  }
+}
+.tiptap.ProseMirror {
+  // Common list styles ol, ul {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    padding-left: 1.5em;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    ol,
+    ul {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  li {
+    p {
+      margin-top: 0;
+      line-height: 1.6;
+    }
+  }
+  // Ordered lists ol {
+    list-style: decimal;
+    ol {
+      list-style: lower-alpha;
+      ol {
+        list-style: lower-roman;
+      }
+    }
+  }
+  // Unordered lists ul:not([data-type="taskList"]) {
+    list-style: disc;
+    ul {
+      list-style: circle;
+      ul {
+        list-style: square;
+      }
+    }
+  }
+  // Task lists ul[data-type="taskList"] {
+    padding-left: 0.25em;
+    li {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      &:not(:has(> p:first-child)) {
+        list-style-type: none;
+      }
+      &[data-checked=true] {
+        > div > p {
+          opacity: 0.5;
+          text-decoration: line-through;
+        }
+        > div > p span {
+          text-decoration: line-through;
+        }
+      }
+      label {
+        position: relative;
+        padding-top: 0.375rem;
+        padding-right: 0.5rem;
+        input[type=checkbox] {
+          position: absolute;
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+        span {
+          display: block;
+          width: 1em;
+          height: 1em;
+          border: 1px solid var(--tt-checklist-border-color);
+          border-radius: var(--tt-radius-xs, 0.25rem);
+          position: relative;
+          cursor: pointer;
+          background-color: var(--tt-checklist-bg-color);
+          transition: background-color 80ms ease-out, border-color 80ms ease-out;
+          &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 0.75em;
+            height: 0.75em;
+            background-color: var(--tt-checklist-check-icon-color);
+            opacity: 0;
+            -webkit-mask: url(data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M21.4142%204.58579C22.1953%205.36683%2022.1953%206.63317%2021.4142%207.41421L10.4142%2018.4142C9.63317%2019.1953%208.36684%2019.1953%207.58579%2018.4142L2.58579%2013.4142C1.80474%2012.6332%201.80474%2011.3668%202.58579%2010.5858C3.36683%209.80474%204.63317%209.80474%205.41421%2010.5858L9%2014.1716L18.5858%204.58579C19.3668%203.80474%2020.6332%203.80474%2021.4142%204.58579Z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E) center/contain no-repeat;
+            mask: url(data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M21.4142%204.58579C22.1953%205.36683%2022.1953%206.63317%2021.4142%207.41421L10.4142%2018.4142C9.63317%2019.1953%208.36684%2019.1953%207.58579%2018.4142L2.58579%2013.4142C1.80474%2012.6332%201.80474%2011.3668%202.58579%2010.5858C3.36683%209.80474%204.63317%209.80474%205.41421%2010.5858L9%2014.1716L18.5858%204.58579C19.3668%203.80474%2020.6332%203.80474%2021.4142%204.58579Z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E) center/contain no-repeat;
+          }
+        }
+        input[type=checkbox]:checked + span {
+          background: var(--tt-checklist-bg-active-color);
+          border-color: var(--tt-checklist-border-active-color);
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+      div {
+        flex: 1 1 0%;
+        min-width: 0;
+      }
+    }
+  }
+}
+
+/* src/tiptap-node/image-node/image-node.scss */
+.tiptap.ProseMirror {
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  > img:not([data-type=emoji] img) {
+    margin: 2rem 0;
+    outline: 0.125rem solid transparent;
+    border-radius: var(--tt-radius-xs, 0.25rem);
+  }
+  img:not([data-type=emoji] img).ProseMirror-selectednode {
+    outline-color: var(--tt-brand-color-500);
+  }
+  // Thread image handling .tiptap-thread:has(> img) {
+    margin: 2rem 0;
+    img {
+      outline: 0.125rem solid transparent;
+      border-radius: var(--tt-radius-xs, 0.25rem);
+    }
+  }
+  .tiptap-thread img {
+    margin: 0;
+  }
+}
+
+/* src/tiptap-node/heading-node/heading-node.scss */
+.tiptap.ProseMirror {
+  h1,
+  h2,
+  h3,
+  h4 {
+    position: relative;
+    color: inherit;
+    font-style: inherit;
+    &:first-child,
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+  h1 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: 3em;
+  }
+  h2 {
+    font-size: 1.25em;
+    font-weight: 700;
+    margin-top: 2.5em;
+  }
+  h3 {
+    font-size: 1.125em;
+    font-weight: 600;
+    margin-top: 2em;
+  }
+  h4 {
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 2em;
+  }
+}
+
+/* src/tiptap-node/paragraph-node/paragraph-node.scss */
+.tiptap.ProseMirror {
+  --tt-collaboration-carets-label: var(--tt-gray-light-900);
+  --link-text-color: var(--tt-brand-color-500);
+  --thread-text: var(--tt-gray-light-900);
+  --placeholder-color: var(--tt-gray-light-a-400);
+  --thread-bg-color: var(--tt-color-yellow-inc-2);
+  // ai --tiptap-ai-insertion-color: var(--tt-brand-color-600);
+  .dark & {
+    --tt-collaboration-carets-label: var(--tt-gray-dark-100);
+    --link-text-color: var(--tt-brand-color-400);
+    --thread-text: var(--tt-gray-dark-900);
+    --placeholder-color: var(--tt-gray-dark-a-400);
+    --thread-bg-color: var(--tt-color-yellow-dec-2);
+    --tiptap-ai-insertion-color: var(--tt-brand-color-400);
+  }
+}
+.tiptap.ProseMirror > * {
+  position: relative;
+}
+.tiptap.ProseMirror {
+  white-space: pre-wrap;
+  outline: none;
+  caret-color: var(--tt-cursor-color);
+  // Paragraph spacing p:not(:first-child):not(td p):not(th p) {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: normal;
+    margin-top: 20px;
+  }
+  // Selection styles &:not(.readonly):not(.ProseMirror-hideselection) {
+    ::selection {
+      background-color: var(--tt-selection-color);
+    }
+    .selection::selection {
+      background: transparent;
+    }
+  }
+  .selection {
+    display: inline;
+    background-color: var(--tt-selection-color);
+  }
+  // Selected node styles .ProseMirror-selectednode:not(img):not(pre):not(.react-renderer) {
+    border-radius: var(--tt-radius-md);
+    background-color: var(--tt-selection-color);
+  }
+  .ProseMirror-hideselection {
+    caret-color: transparent;
+  }
+  // Resize cursor &.resize-cursor {
+    cursor: ew-resize;
+    cursor: col-resize;
+  }
+}
+.tiptap.ProseMirror {
+  // Text decoration inheritance for spans a span {
+    text-decoration: underline;
+  }
+  s span {
+    text-decoration: line-through;
+  }
+  u span {
+    text-decoration: underline;
+  }
+  .tiptap-ai-insertion {
+    color: var(--tiptap-ai-insertion-color);
+  }
+}
+.tiptap.ProseMirror {
+  .collaboration-carets {
+    &__caret {
+      border-right: 1px solid transparent;
+      border-left: 1px solid transparent;
+      pointer-events: none;
+      margin-left: -1px;
+      margin-right: -1px;
+      position: relative;
+      word-break: normal;
+    }
+    &__label {
+      color: var(--tt-collaboration-carets-label);
+      border-radius: 0.25rem;
+      border-bottom-left-radius: 0;
+      font-size: 0.75rem;
+      font-weight: 600;
+      left: -1px;
+      line-height: 1;
+      padding: 0.125rem 0.375rem;
+      position: absolute;
+      top: -1.3em;
+      user-select: none;
+      white-space: nowrap;
+    }
+  }
+}
+.tiptap.ProseMirror [data-type=emoji] img {
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  cursor: text;
+}
+.tiptap.ProseMirror {
+  a {
+    color: var(--link-text-color);
+    text-decoration: underline;
+  }
+}
+.tiptap.ProseMirror {
+  [data-type=mention] {
+    display: inline-block;
+    color: var(--tt-brand-color-500);
+  }
+}
+.tiptap.ProseMirror {
+  // Base styles for inline threads .tiptap-thread.tiptap-thread--unresolved.tiptap-thread--inline {
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    color: var(--thread-text);
+    border-bottom: 2px dashed var(--tt-color-yellow-base);
+    font-weight: 600;
+    &.tiptap-thread--selected,
+    &.tiptap-thread--hovered {
+      background-color: var(--thread-bg-color);
+      border-bottom-color: transparent;
+    }
+  }
+  // Block thread styles with images .tiptap-thread.tiptap-thread--unresolved.tiptap-thread--block {
+    &:has(img) {
+      outline: 0.125rem solid var(--tt-color-yellow-base);
+      border-radius: var(--tt-radius-xs, 0.25rem);
+      overflow: hidden;
+      width: fit-content;
+      &.tiptap-thread--selected {
+        outline-width: 0.25rem;
+        outline-color: var(--tt-color-yellow-base);
+      }
+      &.tiptap-thread--hovered {
+        outline-width: 0.25rem;
+      }
+    }
+    // Block thread styles without images &:not(:has(img)) {
+      border-radius: 0.25rem;
+      border-bottom: 0.125rem dashed var(--tt-color-yellow-base);
+      border-top: 0.125rem dashed var(--tt-color-yellow-base);
+      // padding-bottom: 0.5rem;
+      outline: 0.25rem solid transparent;
+      &.tiptap-thread--hovered,
+      &.tiptap-thread--selected {
+        background-color: var(--tt-color-yellow-base);
+        outline-color: var(--tt-color-yellow-base);
+      }
+    }
+  }
+  // Resolved thread styles .tiptap-thread.tiptap-thread--resolved.tiptap-thread--inline.tiptap-thread--selected {
+    background-color: var(--tt-color-yellow-base);
+    border-color: transparent;
+    opacity: 0.5;
+  }
+  // React renderer specific styles .tiptap-thread.tiptap-thread--block:has(.react-renderer) {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+.is-empty:not(.with-slash)[data-placeholder]:has(> .ProseMirror-trailingBreak:only-child)::before {
+  content: attr(data-placeholder);
+}
+.is-empty.with-slash[data-placeholder]:has(> .ProseMirror-trailingBreak:only-child)::before {
+  content: "Write, type '/' for commands\2026";
+  font-style: italic;
+}
+.is-empty[data-placeholder]:has(> .ProseMirror-trailingBreak:only-child):before {
+  pointer-events: none;
+  height: 0;
+  position: absolute;
+  width: 100%;
+  text-align: inherit;
+  left: 0;
+  right: 0;
+}
+.is-empty[data-placeholder]:has(> .ProseMirror-trailingBreak):before {
+  color: var(--placeholder-color);
+}
+.prosemirror-dropcursor-block,
+.prosemirror-dropcursor-inline {
+  background: var(--tt-brand-color-400) !important;
+  border-radius: 0.25rem;
+  margin-left: -1px;
+  margin-right: -1px;
+  width: 100%;
+  height: 0.188rem;
+  cursor: grabbing;
+}
+
+/* ../../node_modules/highlight.js/styles/github.css */
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+code.hljs {
+  padding: 3px 5px;
+}
+.hljs {
+  color: #24292e;
+  background: #ffffff;
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  color: #d73a49;
+}
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  color: #6f42c1;
+}
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  color: #005cc5;
+}
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  color: #032f62;
+}
+.hljs-built_in,
+.hljs-symbol {
+  color: #e36209;
+}
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  color: #6a737d;
+}
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  color: #22863a;
+}
+.hljs-subst {
+  color: #24292e;
+}
+.hljs-section {
+  color: #005cc5;
+  font-weight: bold;
+}
+.hljs-bullet {
+  color: #735c0f;
+}
+.hljs-emphasis {
+  color: #24292e;
+  font-style: italic;
+}
+.hljs-strong {
+  color: #24292e;
+  font-weight: bold;
+}
+.hljs-addition {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+.hljs-deletion {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+}
+
+/* src/tiptap-ui-primitive/badge/badge-colors.scss */
+.tiptap-badge {
+  --tt-badge-border-color: var(--tt-gray-light-a-200);
+  --tt-badge-border-color-subdued: var(--tt-gray-light-a-200);
+  --tt-badge-border-color-emphasized: var(--tt-gray-light-a-600);
+  --tt-badge-text-color: var(--tt-gray-light-a-500);
+  --tt-badge-text-color-subdued: var( --tt-gray-light-a-400 );
+  //less important badge --tt-badge-text-color-emphasized: var( --tt-gray-light-a-600 );
+  //more important badge --tt-badge-bg-color: var(--white);
+  --tt-badge-bg-color-subdued: var(--white);
+  //less important badge --tt-badge-bg-color-emphasized: var(--white);
+  //more important badge --tt-badge-icon-color: var(--tt-gray-light-a-500);
+  --tt-badge-icon-color-subdued: var( --tt-gray-light-a-400 );
+  //less important badge --tt-badge-icon-color-emphasized: var( --tt-brand-color-600 );
+  //more important badge .dark & {
+    --tt-badge-border-color: var(--tt-gray-dark-a-200);
+    --tt-badge-border-color-subdued: var(--tt-gray-dark-a-200);
+    --tt-badge-border-color-emphasized: var(--tt-gray-dark-a-500);
+    --tt-badge-text-color: var(--tt-gray-dark-a-500);
+    --tt-badge-text-color-subdued: var( --tt-gray-dark-a-400 );
+    //less important badge --tt-badge-text-color-emphasized: var( --tt-gray-dark-a-600 );
+    //more important badge --tt-badge-bg-color: var(--black);
+    --tt-badge-bg-color-subdued: var(--black);
+    //less important badge --tt-badge-bg-color-emphasized: var(--black);
+    //more important badge --tt-badge-icon-color: var(--tt-gray-dark-a-500);
+    --tt-badge-icon-color-subdued: var( --tt-gray-dark-a-400 );
+    //less important badge --tt-badge-icon-color-emphasized: var( --tt-brand-color-400 );
+    //more important badge;
+  }
+  &[data-style=ghost] {
+    --tt-badge-border-color: var(--tt-gray-light-a-200);
+    --tt-badge-border-color-subdued: var(--tt-gray-light-a-200);
+    --tt-badge-border-color-emphasized: var(--tt-gray-light-a-600);
+    --tt-badge-text-color: var(--tt-gray-light-a-500);
+    --tt-badge-text-color-subdued: var( --tt-gray-light-a-400 );
+    //less important badge --tt-badge-text-color-emphasized: var( --tt-gray-light-a-600 );
+    //more important badge --tt-badge-bg-color: var(--transparent);
+    --tt-badge-bg-color-subdued: var(--transparent);
+    //less important badge --tt-badge-bg-color-emphasized: var(--transparent);
+    //more important badge --tt-badge-icon-color: var(--tt-gray-light-a-500);
+    --tt-badge-icon-color-subdued: var( --tt-gray-light-a-400 );
+    //less important badge --tt-badge-icon-color-emphasized: var( --tt-brand-color-600 );
+    //more important badge .dark & {
+      --tt-badge-border-color: var(--tt-gray-dark-a-200);
+      --tt-badge-border-color-subdued: var(--tt-gray-dark-a-200);
+      --tt-badge-border-color-emphasized: var(--tt-gray-dark-a-500);
+      --tt-badge-text-color: var(--tt-gray-dark-a-500);
+      --tt-badge-text-color-subdued: var( --tt-gray-dark-a-400 );
+      //less important badge --tt-badge-text-color-emphasized: var( --tt-gray-dark-a-600 );
+      //more important badge --tt-badge-bg-color: var(--transparent);
+      --tt-badge-bg-color-subdued: var(--transparent);
+      //less important badge --tt-badge-bg-color-emphasized: var(--transparent);
+      //more important badge --tt-badge-icon-color: var(--tt-gray-dark-a-500);
+      --tt-badge-icon-color-subdued: var( --tt-gray-dark-a-400 );
+      //less important badge --tt-badge-icon-color-emphasized: var( --tt-brand-color-400 );
+      //more important badge;
+    }
+  }
+  &[data-style=gray] {
+    --tt-badge-border-color: var(--tt-gray-light-a-200);
+    --tt-badge-border-color-subdued: var(--tt-gray-light-a-200);
+    --tt-badge-border-color-emphasized: var(--tt-gray-light-a-500);
+    --tt-badge-text-color: var(--tt-gray-light-a-500);
+    --tt-badge-text-color-subdued: var( --tt-gray-light-a-400 );
+    //less important badge --tt-badge-text-color-emphasized: var(--white);
+    //more important badge --tt-badge-bg-color: var(--tt-gray-light-a-100);
+    --tt-badge-bg-color-subdued: var( --tt-gray-light-a-50 );
+    //less important badge --tt-badge-bg-color-emphasized: var( --tt-gray-light-a-700 );
+    //more important badge --tt-badge-icon-color: var(--tt-gray-light-a-500);
+    --tt-badge-icon-color-subdued: var( --tt-gray-light-a-400 );
+    //less important badge --tt-badge-icon-color-emphasized: var(--white);
+    //more important badge .dark & {
+      --tt-badge-border-color: var(--tt-gray-dark-a-200);
+      --tt-badge-border-color-subdued: var(--tt-gray-dark-a-200);
+      --tt-badge-border-color-emphasized: var(--tt-gray-dark-a-500);
+      --tt-badge-text-color: var(--tt-gray-dark-a-500);
+      --tt-badge-text-color-subdued: var( --tt-gray-dark-a-400 );
+      //less important badge --tt-badge-text-color-emphasized: var(--black);
+      //more important badge --tt-badge-bg-color: var(--tt-gray-dark-a-100);
+      --tt-badge-bg-color-subdued: var( --tt-gray-dark-a-50 );
+      //less important badge --tt-badge-bg-color-emphasized: var( --tt-gray-dark-a-800 );
+      //more important badge --tt-badge-icon-color: var(--tt-gray-dark-a-500);
+      --tt-badge-icon-color-subdued: var( --tt-gray-dark-a-400 );
+      //less important badge --tt-badge-icon-color-emphasized: var(--black);
+      //more important badge;
+    }
+  }
+  &[data-style=green] {
+    --tt-badge-border-color: var(--tt-color-green-inc-2);
+    --tt-badge-border-color-subdued: var(--tt-color-green-inc-3);
+    --tt-badge-border-color-emphasized: var(--tt-color-green-dec-2);
+    --tt-badge-text-color: var(--tt-color-green-dec-3);
+    --tt-badge-text-color-subdued: var( --tt-color-green-dec-2 );
+    //less important badge --tt-badge-text-color-emphasized: var( --tt-color-green-inc-5 );
+    //more important badge --tt-badge-bg-color: var(--tt-color-green-inc-4);
+    --tt-badge-bg-color-subdued: var( --tt-color-green-inc-5 );
+    //less important badge --tt-badge-bg-color-emphasized: var( --tt-color-green-dec-1 );
+    //more important badge --tt-badge-icon-color: var(--tt-color-green-dec-3);
+    --tt-badge-icon-color-subdued: var( --tt-color-green-dec-2 );
+    //less important badge --tt-badge-icon-color-emphasized: var( --tt-color-green-inc-5 );
+    //more important badge .dark & {
+      --tt-badge-border-color: var(--tt-color-green-dec-2);
+      --tt-badge-border-color-subdued: var(--tt-color-green-dec-3);
+      --tt-badge-border-color-emphasized: var(--tt-color-green-base);
+      --tt-badge-text-color: var(--tt-color-green-inc-3);
+      --tt-badge-text-color-subdued: var( --tt-color-green-inc-2 );
+      //less important badge --tt-badge-text-color-emphasized: var( --tt-color-green-dec-5 );
+      //more important badge --tt-badge-bg-color: var(--tt-color-green-dec-4);
+      --tt-badge-bg-color-subdued: var( --tt-color-green-dec-5 );
+      //less important badge --tt-badge-bg-color-emphasized: var( --tt-color-green-inc-1 );
+      //more important badge --tt-badge-icon-color: var(--tt-color-green-inc-3);
+      --tt-badge-icon-color-subdued: var( --tt-color-green-inc-2 );
+      //less important badge --tt-badge-icon-color-emphasized: var( --tt-color-green-dec-5 );
+      //more important badge;
+    }
+  }
+  &[data-style=yellow] {
+    --tt-badge-border-color: var(--tt-color-yellow-inc-2);
+    --tt-badge-border-color-subdued: var(--tt-color-yellow-inc-3);
+    --tt-badge-border-color-emphasized: var(--tt-color-yellow-dec-1);
+    --tt-badge-text-color: var(--tt-color-yellow-dec-3);
+    --tt-badge-text-color-subdued: var( --tt-color-yellow-dec-2 );
+    //less important badge --tt-badge-text-color-emphasized: var( --tt-color-yellow-dec-3 );
+    //more important badge --tt-badge-bg-color: var(--tt-color-yellow-inc-4);
+    --tt-badge-bg-color-subdued: var( --tt-color-yellow-inc-5 );
+    //less important badge --tt-badge-bg-color-emphasized: var( --tt-color-yellow-base );
+    //more important badge --tt-badge-icon-color: var(--tt-color-yellow-dec-3);
+    --tt-badge-icon-color-subdued: var( --tt-color-yellow-dec-2 );
+    //less important badge --tt-badge-icon-color-emphasized: var( --tt-color-yellow-dec-3 );
+    //more important badge .dark & {
+      --tt-badge-border-color: var(--tt-color-yellow-dec-2);
+      --tt-badge-border-color-subdued: var(--tt-color-yellow-dec-3);
+      --tt-badge-border-color-emphasized: var(--tt-color-yellow-inc-1);
+      --tt-badge-text-color: var(--tt-color-yellow-inc-3);
+      --tt-badge-text-color-subdued: var( --tt-color-yellow-inc-2 );
+      //less important badge --tt-badge-text-color-emphasized: var( --tt-color-yellow-dec-3 );
+      //more important badge --tt-badge-bg-color: var(--tt-color-yellow-dec-4);
+      --tt-badge-bg-color-subdued: var( --tt-color-yellow-dec-5 );
+      //less important badge --tt-badge-bg-color-emphasized: var( --tt-color-yellow-base );
+      //more important badge --tt-badge-icon-color: var(--tt-color-yellow-inc-3);
+      --tt-badge-icon-color-subdued: var( --tt-color-yellow-inc-2 );
+      //less important badge --tt-badge-icon-color-emphasized: var( --tt-color-yellow-dec-3 );
+      //more important badge;
+    }
+  }
+  &[data-style=red] {
+    --tt-badge-border-color: var(--tt-color-red-inc-2);
+    --tt-badge-border-color-subdued: var(--tt-color-red-inc-3);
+    --tt-badge-border-color-emphasized: var(--tt-color-red-dec-2);
+    --tt-badge-text-color: var(--tt-color-red-dec-3);
+    --tt-badge-text-color-subdued: var( --tt-color-red-dec-2 );
+    //less important badge --tt-badge-text-color-emphasized: var( --tt-color-red-inc-5 );
+    //more important badge --tt-badge-bg-color: var(--tt-color-red-inc-4);
+    --tt-badge-bg-color-subdued: var( --tt-color-red-inc-5 );
+    //less important badge --tt-badge-bg-color-emphasized: var( --tt-color-red-dec-1 );
+    //more important badge --tt-badge-icon-color: var(--tt-color-red-dec-3);
+    --tt-badge-icon-color-subdued: var( --tt-color-red-dec-2 );
+    //less important badge --tt-badge-icon-color-emphasized: var( --tt-color-red-inc-5 );
+    //more important badge .dark & {
+      --tt-badge-border-color: var(--tt-color-red-dec-2);
+      --tt-badge-border-color-subdued: var(--tt-color-red-dec-3);
+      --tt-badge-border-color-emphasized: var(--tt-color-red-base);
+      --tt-badge-text-color: var(--tt-color-red-inc-3);
+      --tt-badge-text-color-subdued: var( --tt-color-red-inc-2 );
+      //less important badge --tt-badge-text-color-emphasized: var( --tt-color-red-dec-5 );
+      //more important badge --tt-badge-bg-color: var(--tt-color-red-dec-4);
+      --tt-badge-bg-color-subdued: var( --tt-color-red-dec-5 );
+      //less important badge --tt-badge-bg-color-emphasized: var( --tt-color-red-inc-1 );
+      //more important badge --tt-badge-icon-color: var(--tt-color-red-inc-3);
+      --tt-badge-icon-color-subdued: var( --tt-color-red-inc-2 );
+      //less important badge --tt-badge-icon-color-emphasized: var( --tt-color-red-dec-5 );
+      //more important badge;
+    }
+  }
+  &[data-style=brand] {
+    --tt-badge-border-color: var(--tt-brand-color-300);
+    --tt-badge-border-color-subdued: var(--tt-brand-color-200);
+    --tt-badge-border-color-emphasized: var(--tt-brand-color-600);
+    --tt-badge-text-color: var(--tt-brand-color-800);
+    --tt-badge-text-color-subdued: var( --tt-brand-color-700 );
+    //less important badge --tt-badge-text-color-emphasized: var( --tt-brand-color-50 );
+    //more important badge --tt-badge-bg-color: var(--tt-brand-color-100);
+    --tt-badge-bg-color-subdued: var( --tt-brand-color-50 );
+    //less important badge --tt-badge-bg-color-emphasized: var( --tt-brand-color-600 );
+    //more important badge --tt-badge-icon-color: var(--tt-brand-color-800);
+    --tt-badge-icon-color-subdued: var( --tt-brand-color-700 );
+    //less important badge --tt-badge-icon-color-emphasized: var( --tt-brand-color-100 );
+    //more important badge .dark & {
+      --tt-badge-border-color: var(--tt-brand-color-700);
+      --tt-badge-border-color-subdued: var(--tt-brand-color-800);
+      --tt-badge-border-color-emphasized: var(--tt-brand-color-400);
+      --tt-badge-text-color: var(--tt-brand-color-200);
+      --tt-badge-text-color-subdued: var( --tt-brand-color-300 );
+      //less important badge --tt-badge-text-color-emphasized: var( --tt-brand-color-950 );
+      //more important badge --tt-badge-bg-color: var(--tt-brand-color-900);
+      --tt-badge-bg-color-subdued: var( --tt-brand-color-950 );
+      //less important badge --tt-badge-bg-color-emphasized: var( --tt-brand-color-400 );
+      //more important badge --tt-badge-icon-color: var(--tt-brand-color-200);
+      --tt-badge-icon-color-subdued: var( --tt-brand-color-300 );
+      //less important badge --tt-badge-icon-color-emphasized: var( --tt-brand-color-900 );
+      //more important badge;
+    }
+  }
+}
+
+/* src/tiptap-ui-primitive/badge/badge-group.scss */
+.tiptap-badge-group {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.tiptap-badge-group {
+  [data-orientation=vertical] {
+    flex-direction: column;
+  }
+  [data-orientation=horizontal] {
+    flex-direction: row;
+  }
+}
+
+/* src/tiptap-ui-primitive/badge/badge.scss */
+.tiptap-badge {
+  font-size: 0.625rem;
+  font-weight: 700;
+  font-feature-settings: "salt" on, "cv01" on;
+  line-height: 1.15;
+  height: 1.25rem;
+  min-width: 1.25rem;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px;
+  border-radius: var(--tt-radius-sm, 0.375rem);
+  transition-property:
+    background,
+    color,
+    opacity;
+  transition-duration: var(--tt-transition-duration-default);
+  transition-timing-function: var(--tt-transition-easing-default);
+  &[data-size=large] {
+    font-size: 0.75rem;
+    height: 1.5rem;
+    min-width: 1.5rem;
+    padding: 0.375rem;
+    border-radius: var(--tt-radius-md, 0.375rem);
+  }
+  &[data-size=small] {
+    height: 1rem;
+    min-width: 1rem;
+    padding: 0.125rem;
+    border-radius: var(--tt-radius-xs, 0.25rem);
+  }
+  .tiptap-badge-text {
+    padding: 0 0.125rem;
+    flex-grow: 1;
+    text-align: left;
+  }
+  &[data-text-trim=on] {
+    .tiptap-badge-text {
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+  .tiptap-badge-icon {
+    pointer-events: none;
+    flex-shrink: 0;
+    width: 0.625rem;
+    height: 0.625rem;
+  }
+  &[data-size=large] .tiptap-badge-icon {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+}
+.tiptap-badge {
+  background-color: var(--tt-badge-bg-color);
+  border-color: var(--tt-badge-border-color);
+  color: var(--tt-badge-text-color);
+  .tiptap-badge-icon {
+    color: var(--tt-badge-icon-color);
+  }
+  &[data-appearance=emphasized] {
+    background-color: var(--tt-badge-bg-color-emphasized);
+    border-color: var(--tt-badge-border-color-emphasized);
+    color: var(--tt-badge-text-color-emphasized);
+    .tiptap-badge-icon {
+      color: var(--tt-badge-icon-color-emphasized);
+    }
+  }
+  &[data-appearance=subdued] {
+    background-color: var(--tt-badge-bg-color-subdued);
+    border-color: var(--tt-badge-border-color-subdued);
+    color: var(--tt-badge-text-color-subdued);
+    .tiptap-badge-icon {
+      color: var(--tt-badge-icon-color-subdued);
+    }
+  }
+}
+
+/* src/tiptap-ui-primitive/dropdown-menu/dropdown-menu.scss */
+.tiptap-dropdown-menu {
+  --tt-dropdown-menu-bg-color: var(--white);
+  --tt-dropdown-menu-border-color: var(--tt-gray-light-a-100);
+  --tt-dropdown-menu-text-color: var(--tt-gray-light-a-600);
+  .dark & {
+    --tt-dropdown-menu-border-color: var(--tt-gray-dark-a-50);
+    --tt-dropdown-menu-bg-color: var(--tt-gray-dark-50);
+    --tt-dropdown-menu-text-color: var(--tt-gray-dark-a-600);
+  }
+}
+.tiptap-dropdown-menu {
+  z-index: 50;
+  outline: none;
+  transform-origin: var(--radix-dropdown-menu-content-transform-origin);
+  max-height: var(--radix-dropdown-menu-content-available-height);
+  > * {
+    max-height: var(--radix-dropdown-menu-content-available-height);
+  }
+  &[data-state=open] {
+    animation: fadeIn 150ms cubic-bezier(0.16, 1, 0.3, 1), zoomIn 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  &[data-state=closed] {
+    animation: fadeOut 150ms cubic-bezier(0.16, 1, 0.3, 1), zoomOut 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  &[data-side=top],
+  &[data-side=top-start],
+  &[data-side=top-end] {
+    animation: slideFromBottom 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  &[data-side=right],
+  &[data-side=right-start],
+  &[data-side=right-end] {
+    animation: slideFromLeft 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  &[data-side=bottom],
+  &[data-side=bottom-start],
+  &[data-side=bottom-end] {
+    animation: slideFromTop 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  &[data-side=left],
+  &[data-side=left-start],
+  &[data-side=left-end] {
+    animation: slideFromRight 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+/* src/tiptap-ui-primitive/card/card.scss */
+:root {
+  --tiptap-card-bg-color: var(--white);
+  --tiptap-card-border-color: var(--tt-gray-light-a-100);
+  --tiptap-card-group-label-color: var(--tt-gray-light-a-800);
+}
+.dark {
+  --tiptap-card-bg-color: var(--tt-gray-dark-50);
+  --tiptap-card-border-color: var(--tt-gray-dark-a-100);
+  --tiptap-card-group-label-color: var(--tt-gray-dark-a-800);
+}
+.tiptap-card {
+  --padding: 0.375rem;
+  --border-width: 1px;
+  border-radius: calc(var(--padding) + var(--tt-radius-lg));
+  box-shadow: var(--tt-shadow-elevated-md);
+  background-color: var(--tiptap-card-bg-color);
+  border: 1px solid var(--tiptap-card-border-color);
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  align-items: center;
+  position: relative;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+}
+.tiptap-card-header {
+  padding: 0.375rem;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: var(--border-width) solid var(--tiptap-card-border-color);
+}
+.tiptap-card-body {
+  padding: 0.375rem;
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+.tiptap-card-item-group {
+  position: relative;
+  display: flex;
+  vertical-align: middle;
+  min-width: max-content;
+  &[data-orientation=vertical] {
+    flex-direction: column;
+    justify-content: center;
+  }
+  &[data-orientation=horizontal] {
+    gap: 0.25rem;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.tiptap-card-group-label {
+  padding-top: 0.75rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.25rem;
+  line-height: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+  color: var(--tiptap-card-group-label-color);
+}
+
+/* src/tiptap-ui-primitive/popover/popover.scss */
+.tiptap-popover {
+  --tt-popover-bg-color: var(--white);
+  --tt-popover-border-color: var(--tt-gray-light-a-100);
+  --tt-popover-text-color: var(--tt-gray-light-a-600);
+  .dark & {
+    --tt-popover-border-color: var(--tt-gray-dark-a-50);
+    --tt-popover-bg-color: var(--tt-gray-dark-50);
+    --tt-popover-text-color: var(--tt-gray-dark-a-600);
+  }
+}
+.tiptap-popover {
+  z-index: 50;
+  outline: none;
+  transform-origin: var(--radix-popover-content-transform-origin);
+  max-height: var(--radix-popover-content-available-height);
+  > * {
+    max-height: var(--radix-popover-content-available-height);
+  }
+  &[data-state=open] {
+    animation: fadeIn 150ms cubic-bezier(0.16, 1, 0.3, 1), zoomIn 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  &[data-state=closed] {
+    animation: fadeOut 150ms cubic-bezier(0.16, 1, 0.3, 1), zoomOut 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  &[data-side=top],
+  &[data-side=top-start],
+  &[data-side=top-end] {
+    animation: slideFromBottom 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  &[data-side=right],
+  &[data-side=right-start],
+  &[data-side=right-end] {
+    animation: slideFromLeft 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  &[data-side=bottom],
+  &[data-side=bottom-start],
+  &[data-side=bottom-end] {
+    animation: slideFromTop 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  &[data-side=left],
+  &[data-side=left-start],
+  &[data-side=left-end] {
+    animation: slideFromRight 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+/* src/tiptap-ui/color-highlight-button/color-highlight-button.scss */
+.tiptap-button-highlight {
+  position: relative;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0 -0.175rem;
+  border-radius: var(--tt-radius-xl);
+  background-color: var(--highlight-color);
+  transition: transform 0.2s ease;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: inherit;
+    box-sizing: border-box;
+    border: 1px solid var(--highlight-color);
+    filter: brightness(95%);
+    mix-blend-mode: multiply;
+    .dark & {
+      filter: brightness(140%);
+      mix-blend-mode: lighten;
+    }
+  }
+}
+.tiptap-button {
+  &[data-active-state=on] {
+    .tiptap-button-highlight {
+      &::after {
+        filter: brightness(80%);
+      }
+    }
+  }
+  .dark & {
+    &[data-active-state=on] {
+      .tiptap-button-highlight {
+        &::after {
+          // Andere Eigenschaft f\fcr .dark Kontext filter: brightness(180%);
+        }
+      }
+    }
+  }
+}
+
+/* src/simple-editor.scss */
+body {
+  --tt-toolbar-height: 44px;
+  --tt-theme-text: var(--tt-gray-light-900);
+  .dark & {
+    --tt-theme-text: var(--tt-gray-dark-900);
+  }
+}
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--tt-theme-text);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0;
+  overscroll-behavior-y: none;
+}
+html,
+body {
+  overscroll-behavior-x: none;
+}
+html,
+body,
+#root,
+#app {
+  height: 100%;
+  background-color: var(--tt-bg-color);
+}
+::-webkit-scrollbar {
+  width: 0.25rem;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--tt-scrollbar-color) transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--tt-scrollbar-color);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+.tiptap.ProseMirror {
+  font-family: "DM Sans", sans-serif;
+}
+.simple-editor-wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+.simple-editor-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.simple-editor-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.simple-editor-content .tiptap.ProseMirror.simple-editor {
+  flex: 1;
+  padding: 3rem 3rem 30vh;
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}
+@media screen and (max-width: 480px) {
+  .simple-editor-content .tiptap.ProseMirror.simple-editor {
+    padding: 1rem 1.5rem 30vh;
+  }
+}
+/*! Bundled license information:
+
+highlight.js/styles/github.css:
+  (*!
+    Theme: GitHub
+    Description: Light theme as seen on github.com
+    Author: github.com
+    Maintainer: @Hirse
+    Updated: 2021-05-15
+  
+    Outdated base version: https://github.com/primer/github-syntax-light
+    Current colors taken from GitHub's CSS
+  *)
+*/
+/*# sourceMappingURL=index.css.map */
