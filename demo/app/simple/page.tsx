@@ -22,10 +22,7 @@ export default function Page() {
 
   return (
     <div style={{ padding: "2rem", maxWidth: "1200px", margin: "0 auto" }}>
-      <h1>SimpleEditor 예시</h1>
-
       <div style={{ marginBottom: "2rem" }}>
-        <h2>에디터</h2>
         <SimpleEditor
           ref={editorRef}
           onChange={(json) => {

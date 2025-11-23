@@ -12,7 +12,6 @@ import { createEditorExtensions, type ImageUploadHandler } from "./utils/extensi
 
 // --- UI Primitives ---
 import { Button } from "@/components/tiptap-ui-primitive/button"
-import { Spacer } from "@/components/tiptap-ui-primitive/spacer"
 import {
   Toolbar,
   ToolbarGroup,
@@ -92,8 +91,6 @@ const MainToolbarContent = ({
 }) => {
   return (
     <>
-      <Spacer />
-
       <ToolbarGroup>
         <UndoRedoButton action="undo" />
         <UndoRedoButton action="redo" />
@@ -150,8 +147,6 @@ const MainToolbarContent = ({
         <YoutubeButton text="YouTube" />
         <FigmaButton text="Figma" />
       </ToolbarGroup>
-
-      <Spacer />
 
       {isMobile && <ToolbarSeparator />}
 

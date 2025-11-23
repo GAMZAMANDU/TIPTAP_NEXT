@@ -29,9 +29,11 @@
      CORE EDITOR STYLES
      ===================== */
 .tiptap.ProseMirror {
+  box-sizing: border-box;
   white-space: pre-wrap;
   outline: none;
   caret-color: var(--tt-cursor-color);
+  overflow-wrap: break-word;
 
   // Paragraph spacing
   p:not(:first-child):not(td p):not(th p) {
