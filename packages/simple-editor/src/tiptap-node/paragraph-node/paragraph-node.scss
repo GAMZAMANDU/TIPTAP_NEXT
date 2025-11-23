@@ -5,7 +5,7 @@
   --placeholder-color: var(--tt-gray-light-a-400);
   --thread-bg-color: var(--tt-color-yellow-inc-2);
 
-  // ai
+ /* ai */
   --tiptap-ai-insertion-color: var(--tt-brand-color-600);
 
   .dark & {
@@ -33,7 +33,7 @@
   outline: none;
   caret-color: var(--tt-cursor-color);
 
-  // Paragraph spacing
+ /* Paragraph spacing */
   p:not(:first-child):not(td p):not(th p) {
     font-size: 1rem;
     line-height: 1.6;
@@ -41,7 +41,7 @@
     margin-top: 20px;
   }
 
-  // Selection styles
+ /* Selection styles */
   &:not(.readonly):not(.ProseMirror-hideselection) {
     ::selection {
       background-color: var(--tt-selection-color);
@@ -57,7 +57,7 @@
     background-color: var(--tt-selection-color);
   }
 
-  // Selected node styles
+ /* Selected node styles */
   .ProseMirror-selectednode:not(img):not(pre):not(.react-renderer) {
     border-radius: var(--tt-radius-md);
     background-color: var(--tt-selection-color);
@@ -67,7 +67,7 @@
     caret-color: transparent;
   }
 
-  // Resize cursor
+ /* Resize cursor */
   &.resize-cursor {
     cursor: ew-resize;
     cursor: col-resize;
@@ -78,7 +78,7 @@
      TEXT DECORATION
      ===================== */
 .tiptap.ProseMirror {
-  // Text decoration inheritance for spans
+ /* Text decoration inheritance for spans */
   a span {
     text-decoration: underline;
   }
@@ -162,7 +162,7 @@
      THREADS
      ===================== */
 .tiptap.ProseMirror {
-  // Base styles for inline threads
+ /* Base styles for inline threads */
   .tiptap-thread.tiptap-thread--unresolved.tiptap-thread--inline {
     transition:
       color 0.2s ease-in-out,
@@ -178,7 +178,7 @@
     }
   }
 
-  // Block thread styles with images
+ /* Block thread styles with images */
   .tiptap-thread.tiptap-thread--unresolved.tiptap-thread--block {
     &:has(img) {
       outline: 0.125rem solid var(--tt-color-yellow-base);
@@ -196,12 +196,12 @@
       }
     }
 
-    // Block thread styles without images
+ /* Block thread styles without images */
     &:not(:has(img)) {
       border-radius: 0.25rem;
       border-bottom: 0.125rem dashed var(--tt-color-yellow-base);
       border-top: 0.125rem dashed var(--tt-color-yellow-base);
-      // padding-bottom: 0.5rem;
+ /* padding-bottom: 0.5rem; */
       outline: 0.25rem solid transparent;
 
       &.tiptap-thread--hovered,
@@ -212,14 +212,14 @@
     }
   }
 
-  // Resolved thread styles
+ /* Resolved thread styles */
   .tiptap-thread.tiptap-thread--resolved.tiptap-thread--inline.tiptap-thread--selected {
     background-color: var(--tt-color-yellow-base);
     border-color: transparent;
     opacity: 0.5;
   }
 
-  // React renderer specific styles
+ /* React renderer specific styles */
   .tiptap-thread.tiptap-thread--block:has(.react-renderer) {
     margin-top: 3rem;
     margin-bottom: 3rem;

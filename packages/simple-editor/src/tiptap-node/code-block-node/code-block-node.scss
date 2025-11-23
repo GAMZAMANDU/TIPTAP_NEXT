@@ -20,7 +20,7 @@
    CODE FORMATTING
    ===================== */
 .tiptap.ProseMirror {
-  // Inline code
+ /* Inline code */
   code {
     background-color: var(--tt-inline-code-bg-color);
     color: var(--tt-inline-code-text-color);
@@ -32,7 +32,7 @@
     padding: 0.1em 0.2em;
   }
 
-  // Code blocks
+ /* Code blocks */
   pre {
     background-color: var(--tt-codeblock-bg);
     color: var(--tt-codeblock-text);
@@ -54,7 +54,7 @@
       font-family: "JetBrains Mono NL", "Fira Code", "Consolas", "Monaco", "Courier New", monospace;
     }
 
-    // Highlight.js syntax highlighting styles
+ /* Highlight.js syntax highlighting styles */
     .hljs {
       background: transparent !important;
       color: inherit;
@@ -63,7 +63,7 @@
       padding: 0;
     }
 
-    // Preserve highlight.js token colors
+ /* Preserve highlight.js token colors */
     .hljs-keyword,
     .hljs-selector-tag,
     .hljs-literal,
@@ -74,15 +74,15 @@
   }
 }
 
-// Dark mode specific styles for code blocks
+/* Dark mode specific styles for code blocks */
 .dark .tiptap.ProseMirror {
   pre {
-    // Ensure highlight.js colors work in dark mode
+ /* Ensure highlight.js colors work in dark mode */
     .hljs {
       background: transparent !important;
     }
 
-    // Override highlight.js colors for dark mode
+ /* Override highlight.js colors for dark mode */
     .hljs-keyword,
     .hljs-selector-tag,
     .hljs-literal,
